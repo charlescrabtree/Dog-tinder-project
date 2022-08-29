@@ -55,8 +55,8 @@ signOutLink.addEventListener('click', signOutUser);
 // }
 
 // displayAllUsers();
-const usersEl = document.getElementById('all-users');
-
+//const usersEl = document.getElementById('all-users');
+const userContainerEl = document.getElementById('users-container');
 
 
 async function displayAllUsers() {
@@ -65,7 +65,8 @@ async function displayAllUsers() {
 
     for (let user of users) {
         const userDiv = renderAllUsers(user);
-        usersEl.append(userDiv);
+        console.log(userDiv);
+        userContainerEl.append(userDiv);
     }
 
 }

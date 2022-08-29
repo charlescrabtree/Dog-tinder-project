@@ -53,16 +53,33 @@ export async function getAllUsers() {
 
 }
 
+
 export async function getUserById(user_id) {
-    const resp = await client.from('pawfile').select('*').match({ user_id }).single();
-    
-    if (resp.error) {
-        throw new Error(resp.error.message);
+    const { data, error } = await client
+        .from('pawfile')
+        .select('*')
+        .eq('id', user_id)
+        .single();
+
+    if (error) {
+        throw error;
     }
-    return resp.data;
 
-
+    return data;
 }
+
+
+// export async function getUserById(user_id) {
+//     const resp = await client.from('pawfile').select('*').match({ user_id });
+    
+//     if (resp.error) {
+//         throw new Error(resp.error.message);
+//     }
+
+//     return resp.data;
+
+
+// }
 
 export async function savePawfile(user_id) {
     return await client
