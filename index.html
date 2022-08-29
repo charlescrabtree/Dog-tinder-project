@@ -18,18 +18,36 @@
 
 <body>
     <header class="page-header">
-        <img class="logo" src="/assets/html_css_js.png">
-        <p class="title">Supabase Web App</p>
+        <img class="logo" src="">
+        <p class="title">Ebarkany</p>
         <nav>
             <a id="sign-out-link" href="auth">Sign Out</a>
         </nav>
     </header>
 
-    <main>
+    <main> 
+        <form id="pawfile-form">
+            <section>
+            <h3>Pawfile Name</h3>
+                <input id="pawfile-name" name="pawfile-name" placeholder="Name of Pawfile">
+            </section>
 
+            <section id="pawfile-img-container">
+                <h3>Pawfile Edtior</h3>
+                <!--the name will have to correspond with supabase table??? -->
+                <input type="file" name="pawfile-image" id="pawfile-image">
+            </section>
+
+            <label>
+                <h3>Pawfile Bio</h3>
+                <textarea name="pawfile-bio" id="pawfile-bio" cols="30" rows="10"></textarea>
+            </label>
+            <div></div>
+            <button id="add-profile-bio"> update bio </button>
+        </form>
     </main>
 
-    <footer>&copy;2022 Alchemy Software Developer</footer>
+   
 
     <script type="module" src="app.js"></script>
 </body>
