@@ -1,5 +1,5 @@
 :root {
-    --background: rgb(224, 234, 247);
+    --background: rgb(195, 161, 240);
     --header-background: white;
     --footer-background: rgb(243, 242, 242);
     --text-color: rgb(7, 5, 68);
@@ -51,4 +51,24 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--footer-background);
+}
+
+form {
+    width: 100%;
+    margin: auto;
+    max-width: 500px;
+    border: 1px solid;
+    background: var(--footer-background);
+    padding: 20px;
+
+    display: grid;
+    gap: 20px;
+}
+form input,
+form textarea,
+form select,
+form button {
+    width: 100%;
+    font-size: 1em;
+    padding: 7px;
 }
