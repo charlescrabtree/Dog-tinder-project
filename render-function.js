@@ -6,7 +6,7 @@ export function renderAllUsers(user) {
 
     const imgEl = document.createElement('img');
     imgEl.classList.add('img-tag');
-    imgEl.src = '';
+    imgEl.src = user.image_url;
 
 
     const nameEl = document.createElement('p');

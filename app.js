@@ -8,7 +8,7 @@ import { renderAllUsers } from './render-function.js';
 // checking if we have a user! (will redirect to auth if not):
 checkAuth();
 // can optionally return the user:
-// const user = checkAuth();
+const user = checkAuth();
 
 // sign out link:
 const signOutLink = document.getElementById('sign-out-link');
@@ -55,6 +55,22 @@ signOutLink.addEventListener('click', signOutUser);
 // }
 
 // displayAllUsers();
+const usersEl = document.getElementById('all-users');
+
+
+
+async function displayAllUsers() {
+    const users = await getAllUsers();
+
+
+    for (let user of users) {
+        const userDiv = renderAllUsers(user);
+        usersEl.append(userDiv);
+    }
+
+}
+
+displayAllUsers();
 
 
 async function loadPawfile() {
@@ -67,12 +83,13 @@ async function loadPawfile() {
 
 loadPawfile();
 
-const pawfileFormEl = document.getElementById('pawfile-form');
+// const pawfileFormEl = document.getElementById('pawfile-form');
 
-async function displayAllUsers() {
-    const users = await getAllUsers();
-    const pawfileRenderEl = renderAllUsers(users);
-    pawfileFormEl.append(pawfileRenderEl);
-}
+// async function displayAllUsers() {
+//     const users = await getAllUsers();
+//     const pawfileRenderEl = renderAllUsers(users);
+//     pawfileFormEl.append(pawfileRenderEl);
+// }
 
-displayAllUsers();
+// displayAllUsers();
+

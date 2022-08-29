@@ -53,8 +53,8 @@ export async function getAllUsers() {
 
 }
 
-export async function getUserById(id) {
-    const resp = await client.from('pawfile').select('*').match({ id }).single();
+export async function getUserById(user_id) {
+    const resp = await client.from('pawfile').select('*').match({ user_id }).single();
     
     if (resp.error) {
         throw new Error(resp.error.message);
