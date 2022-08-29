@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    
+    <title>Supabase Web App</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <img class="logo" src="">
+        <div><p class="title">Ebarkony</p></div>
+        <nav>
+            <a id="sign-out-link" href="../auth">Sign out</a>
+            <a href="../index.html">Pawfiles</a>
+            <a href="../creator-page/index.html">Creator Page</a>
+            <a href="../chat/chat.html">Chat</a>
+        
+        </nav>
+    </header>
+
+    <main> 
+        <form id="pawfile-form">
+            <section>
+            <h3>Pawfile Name</h3>
+                <input id="pawfile-name" name="pawfile-name" placeholder="'Name of Pawfile'">
+                
+            </section>
+            <button id="update-name-button">Update Pawfile Name</button>
+
+            <section id="pawfile-img-container">
+                <h3>Pawfile Edtior</h3>
+                <!--the name will have to correspond with supabase table??? -->
+                <input type="file" name="pawfile-image" id="pawfile-image">
+            </section>
+
+            <label>
+                <h3>Pawfile Bio</h3>
+                <textarea name="pawfile-bio" id="pawfile-bio" cols="30" rows="10" placeholder="'pawfile bio'"></textarea>
+            </label>
+            <div></div>
+            <button id="add-profile-bio"> Update Bio </button>
+        </form>
+    </main>
+
+
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
-const SUPABASE_URL = '';
-const SUPABASE_KEY = '';
+const SUPABASE_URL = 'https://mtegvpmustvqjcrpqjft.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10ZWd2cG11c3R2cWpjcnBxamZ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTk2MzgyMTYsImV4cCI6MTk3NTIxNDIxNn0.1qATbqaxyJY3HmYMZsX0LcLV6_XXcgd_qnE96O4JeR8';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -44,7 +44,7 @@ export async function signOutUser() {
 
 
 export async function getAllUsers() {
-    const resp = await client.from('profiles').select('*');
+    const resp = await client.from('pawfile').select('*');
 
     if (resp.error) {
         throw new Error(resp.error.message);
@@ -54,7 +54,7 @@ export async function getAllUsers() {
 }
 
 export async function getUserById(id) {
-    const resp = await client.from('profiles').select('*').match({ id }).single();
+    const resp = await client.from('pawfile').select('*').match({ id }).single();
     
     if (resp.error) {
         throw new Error(resp.error.message);
@@ -63,4 +63,12 @@ export async function getUserById(id) {
 
 
 }
+
+export async function savePawfile(user_id) {
+    return await client
+        .from('pawfile')
+        .upsert(user_id)
+        .single();
+}
 /* Data functions */
+
