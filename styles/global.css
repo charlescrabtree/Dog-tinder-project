@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Roboto&family=The+Nautigal:wght@700&display=swap');
+
+
 :root {
     --background: rgb(195, 161, 240);
     --header-background: white;
@@ -60,6 +63,125 @@ footer {
     background-color: var(--footer-background);
 }
 
+.main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../assets/pet-background.PNG);
+}
+
+
+
+.creator-names {
+   width: 80%;
+    height: 70px; 
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+
+.creator-images {
+    width: 80%;
+    height: 350px;
+display: flex;    
+    justify-content: space-around;
+    margin: auto;
+}
+
+.charlie-img {
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.emily-img {
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.lawson-img {
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.tanner-img {
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.zach-img {
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.creator-title {
+    color: black;
+    font-family: 'DynaPuff', cursive;
+    font-size: 4.5rem;
+}
+
+.charlie-info {
+    display: flex;
+    flex-direction: column;
+width: 300px;
+height: 300px;
+}
+
+.emily-info {
+    display: flex;
+     flex-direction: column;
+width: 300px;
+height: 300px;
+}
+
+.lawson-info {
+    display: flex;
+     flex-direction: column;
+width: 300px;
+height: 300px;
+}
+
+.tanner-info {
+    display: flex;
+     flex-direction: column;
+width: 300px;
+height: 300px;
+}
+ 
+.zach-info {
+    display: flex;
+     flex-direction: column;
+width: 300px;
+height: 300px;
+}
+
+.creator-info {
+    width: 80%;
+    height: 600px;
+    display: flex;    
+    justify-content: space-around;
+    margin: auto;
+}
+
+
+.linked-in {
+    width: 40px;
+    height: 40px;
+}
+
+.git-hub {
+     width: 40px;
+    height: 40px;
+    
 form {
     width: 100%;
     margin: auto;
