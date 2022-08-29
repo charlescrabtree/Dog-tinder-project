@@ -82,3 +82,14 @@ authForm.addEventListener('submit', async (e) => {
         location.replace(redirectUrl);
     }
 });
+
+// create code for accepting the terms of service box before being able to sign up or log in
+const tosCheckbox = document.getElementById('tos-checkbox');
+tosCheckbox.addEventListener('change', toggleTosCheckbox);
+function toggleTosCheckbox() {
+    if (tosCheckbox.checked) {
+        authButton.disabled = false;
+    } else {
+        authButton.disabled = true;
+    }
+}

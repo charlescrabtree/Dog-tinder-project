@@ -14,16 +14,19 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/form.css" />
+    <link rel="stylesheet" href="../styles/auth.css" />
     <title>Auth</title>
 </head>
 
-<body>
+<body class="signup-body">
     <header class="page-header">
         <img class="logo" src="/assets/html_css_js.png">
         <p id="auth-header" class="title">Sign In</p>
     </header>
 
     <main>
+        <h1 class="web-title">Welcome to 🐾 Ebarkony 🐾!
+        </h1>
         <form id="auth-form">
             <label>
                 Email
@@ -33,10 +36,33 @@
                 Password
                 <input type="password" name="password" required />
             </label>
-            <button></button>
+            <button class="signin-button">Sign In</button>
             <p class="error"></p>
             <a href="./"></a>
         </form>
+        <br>
+        <br>
+
+        <p class="switch">Don't have an account? <a href="./signup.html">Sign Up</a></p>
+        <br>
+        <br>
+        <p>
+            <label class="tos-label">
+                <input id="tos-checkbox" type="checkbox" name="tos" required />
+                I accept the terms and conditions of this service and promise to uphold integrity 
+                and respect for all users. I understand that this service is provided as is and subject
+                to change without notice. I understand that this service is provided for the purpose of
+                sharing information about my dog and that I am responsible for the content I share. Be safe,
+                be kind, and enjoy meeting new doggy friends!
+                <br>
+                <br>
+                <button class="accept">Accept Terms</button>
+            </label>
+        </p>
+
+
+
+
 
     </main>
 
