@@ -1,0 +1,70 @@
+.web-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  margin-bottom: 50px;
+  font-family: 'Titillium Web';
+  font-size: 80px;
+    color: #FEC8D8;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #957DAD, 0 0 20px #957DAD, 0 0 25px #957DAD, 0 0 30px #957DAD, 0 0 35px #957DAD;
+}
+
+.signup-body {
+  background-image: url("../assets/pet-background.PNG");
+  
+}
+
+#auth-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  color: #FEC8D8; 
+  background-color: #957DAD;
+}
+
+.signin-button {
+  margin-top: 10px;
+  height: 45px;
+  background: #FEC8D8;
+  border: 0;
+  font-weight: bold;
+  color: #957DAD;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #957DAD;
+  background:#FEC8D8;
+  width: 25%;
+  margin: auto;
+}
+
+.tos-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #957DAD;
+  background-color: #FEC8D8;
+  background-position: center center;
+  text-align: center;
+  
+}
+
+
+.accept{
+  background-color: #957DAD;
+  color: #FEC8D8;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  margin-bottom: 15px;
+}
