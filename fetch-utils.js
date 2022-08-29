@@ -44,7 +44,7 @@ export async function signOutUser() {
 
 
 export async function getAllUsers() {
-    const resp = await client.from('profiles').select('*');
+    const resp = await client.from('pawfile').select('*');
 
     if (resp.error) {
         throw new Error(resp.error.message);
@@ -54,7 +54,7 @@ export async function getAllUsers() {
 }
 
 export async function getUserById(id) {
-    const resp = await client.from('profiles').select('*').match({ id }).single();
+    const resp = await client.from('pawfile').select('*').match({ id }).single();
     
     if (resp.error) {
         throw new Error(resp.error.message);
@@ -63,4 +63,12 @@ export async function getUserById(id) {
 
 
 }
+
+export async function savePawfile(user_id) {
+    return await client
+        .from('pawfile')
+        .upsert(user_id)
+        .single();
+}
 /* Data functions */
+
