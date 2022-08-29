@@ -93,3 +93,9 @@ function toggleTosCheckbox() {
         authButton.disabled = true;
     }
 }
+const acceptButton = document.getElementById('accept-button');
+acceptButton.addEventListener('click', toggleAcceptButton);
+function toggleAcceptButton() {
+    tosCheckbox.checked = true;
+    toggleTosCheckbox();
+}

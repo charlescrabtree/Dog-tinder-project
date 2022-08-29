@@ -39,8 +39,11 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: #957DAD;
+  background:#FEC8D8;
+  width: 25%;
+  margin: auto;
 }
 
 .tos-label {
@@ -51,9 +54,17 @@
   margin-top: 20px;
   font-size: 1.3rem;
   color: #957DAD;
+  background-color: #FEC8D8;
+  background-position: center center;
+  text-align: center;
+  
 }
+
 
 .accept{
   background-color: #957DAD;
   color: #FEC8D8;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  margin-bottom: 15px;
 }
