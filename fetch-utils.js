@@ -42,4 +42,25 @@ export async function signOutUser() {
     return await client.auth.signOut();
 }
 
+
+export async function getAllUsers() {
+    const resp = await client.from('profiles').select('*');
+
+    if (resp.error) {
+        throw new Error(resp.error.message);
+    }
+    return resp.data;
+
+}
+
+export async function getUserById(id) {
+    const resp = await client.from('profiles').select('*').match({ id }).single();
+    
+    if (resp.error) {
+        throw new Error(resp.error.message);
+    }
+    return resp.data;
+
+
+}
 /* Data functions */
