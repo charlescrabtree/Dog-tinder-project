@@ -25,5 +25,16 @@ export function renderAllUsers(user) {
     return userEl;
 }
 
+export function renderComment(comments) {
+    const commentEl = document.createElement('div');
+
+    for (const comment of comments) {
+        const commentP = document.createElement('p');
+        commentP.textContent = comment.message;
+        commentEl.append(commentP);
+    }
+    return commentEl;
+}
+
 
 
