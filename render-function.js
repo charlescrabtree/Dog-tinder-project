@@ -3,15 +3,15 @@ export function renderAllUsers(user) {
     userEl.classList.add('user-div');
     
 
+    const nameEl = document.createElement('p');
+    nameEl.classList.add('name-tag');
+    nameEl.textContent = user.name;
 
     const imgEl = document.createElement('img');
     imgEl.classList.add('img-tag');
     imgEl.src = user.image_url;
 
 
-    const nameEl = document.createElement('p');
-    nameEl.classList.add('name-tag');
-    nameEl.textContent = user.name;
 
 
     const bioEl = document.createElement('p');
@@ -19,7 +19,7 @@ export function renderAllUsers(user) {
     bioEl.textContent = user.bio;
 
 
-    userEl.append(imgEl, nameEl, bioEl);
+    userEl.append(nameEl, imgEl, bioEl);
 
 
     return userEl;

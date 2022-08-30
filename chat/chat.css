@@ -26,8 +26,6 @@
 }
 body {
     background-image: url('../assets/dog_chat_placeholder.png');
-    /* background-color: rgb(1, 83, 1); */
-    /* background-repeat: no-repeat; */
     display: flex;
     justify-content: center;
 
