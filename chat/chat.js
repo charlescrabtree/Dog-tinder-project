@@ -26,10 +26,10 @@ chatFormEl.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(chatFormEl);
-    const response = await addMessage({ text: formData.get('text') });
+    const response = await addMessage({ message: formData.get('text') });
     console.log(formData, response);
-    const message = response.data;
-    addMessage(message);
+    // const message = response.data;
+    // addMessage(message);
 
     displayComments();
 

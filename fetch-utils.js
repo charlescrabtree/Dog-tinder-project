@@ -47,15 +47,15 @@ export async function signOutUser() {
 
 
 
-// export async function getAllUsers() {
-//     const resp = await client.from('pawfile').select('*');
+export async function getAllUsers() {
+    const resp = await client.from('pawfile').select('*');
 
-//     if (resp.error) {
-//         throw new Error(resp.error.message);
-//     }
-//     return resp.data;
+    if (resp.error) {
+        throw new Error(resp.error.message);
+    }
+    return resp.data;
 
-// }
+}
 
 
 export async function getUserById(user_id) {
@@ -98,7 +98,9 @@ export async function savePawfile(user_id) {
 
 
 
-export async function addMessage(message) {
+export async function addMessage(message) 
+{
+   
     return await client.from('pawfile_chat').insert(message).single();
 }
 
@@ -119,21 +121,7 @@ export async function getMessageById(user_id) {
 
 /* Data functions */
 
-// export async function getMessageById(id) {
-//     const resp = await client.from('pawfile_chat').select('*').match({ id }).single();
-    
-//     if (resp.error) {
-//         throw new Error(resp.error.message);
-//     }
-//     return resp.data;
-// }
-
-// export async function addMessageById(message) {
-//     return await client
-//         .from('pawfile_chat')
-//         .insert(message)
-//         .single();
-// }
+//write a function that sends message request to supabase pawfile_chat table
 
 
 
