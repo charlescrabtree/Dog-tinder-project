@@ -43,3 +43,28 @@ font-family: 'Space Mono', monospace;
     justify-content: flex-end;
     gap: 10px;
 }
+form {
+    width: 100%;
+    margin: auto;
+    max-width: 500px;
+    border: 1px solid;
+    background: var(--footer-background);
+    padding: 20px;
+    border-radius: 10px;
+
+    display: grid;
+    gap: 20px;
+    
+}
+form input,
+form textarea,
+form select,
+form button {
+    width: 100%;
+    font-size: 1em;
+    padding: 7px;
+    border-radius:8px;
+    
+
+}
+

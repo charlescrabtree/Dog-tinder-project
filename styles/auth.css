@@ -14,6 +14,7 @@
 .signup-body {
   background-image: url("../assets/pet-background.PNG");
   
+  
 }
 
 #auth-form {
@@ -23,6 +24,7 @@
   padding: 20px;
   color: #FEC8D8; 
   background-color: #957DAD;
+  border-radius: 15px;
 }
 
 .signin-button {
@@ -57,7 +59,11 @@
   background-color: #FEC8D8;
   background-position: center center;
   text-align: center;
-  
+  width: 700px;
+  height: 320px;
+  margin: auto;
+  border-radius: 15px;
+
 }
 
 

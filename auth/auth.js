@@ -24,7 +24,7 @@ const signUpType = {
 };
 // Sign in options
 const signInType = {
-    header: 'Sign in to your account',
+    header: '🐾Ebarkony🐾',
     button: 'Sign In',
     prompt: 'Need to create an account?',
     action: signInUser,
