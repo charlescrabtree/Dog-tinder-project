@@ -43,15 +43,19 @@ export async function signOutUser() {
 }
 
 
-export async function getAllUsers() {
-    const resp = await client.from('pawfile').select('*');
 
-    if (resp.error) {
-        throw new Error(resp.error.message);
-    }
-    return resp.data;
 
-}
+
+
+// export async function getAllUsers() {
+//     const resp = await client.from('pawfile').select('*');
+
+//     if (resp.error) {
+//         throw new Error(resp.error.message);
+//     }
+//     return resp.data;
+
+// }
 
 export async function getUserById(user_id) {
     const resp = await client.from('pawfile').select('*').match({ user_id }).single();
@@ -71,4 +75,22 @@ export async function savePawfile(user_id) {
         .single();
 }
 /* Data functions */
+
+// export async function getMessageById(id) {
+//     const resp = await client.from('pawfile_chat').select('*').match({ id }).single();
+    
+//     if (resp.error) {
+//         throw new Error(resp.error.message);
+//     }
+//     return resp.data;
+// }
+
+// export async function addMessageById(message) {
+//     return await client
+//         .from('pawfile_chat')
+//         .insert(message)
+//         .single();
+// }
+
+
 
