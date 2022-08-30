@@ -19,25 +19,38 @@ pawfileFormEl.addEventListener('submit', async (e) => {
 
     await savePawfile({
         user_id: user.id,
-        user_name: name,
+        name: name,
         bio: bio,
         image_url: img
     });
 
-    pawfileFormEl.reset();
-
+    
     displayUser();
+    pawfileFormEl.reset();
 });
+
+
+// async function onLoad() {
+
+
+// }
+
+
+
 
 async function displayUser() {
     const response = await getUserById(user.id);
-    console.log(response);
-    if (response) {
+    if (!response) {
+        await savePawfile(user.id);
+        displayUser();
+    } else {
         nameEl.value = response.name;
         bioEl.value = response.bio;
-        imgEl.value = response.image_url;
+        // imgEl.value = response.image_url;
         buttonEl.textContent = 'update';
     }
 }
 
 displayUser();
+
+

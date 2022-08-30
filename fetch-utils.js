@@ -58,7 +58,7 @@ export async function getUserById(user_id) {
     const { data, error } = await client
         .from('pawfile')
         .select('*')
-        .eq('id', user_id)
+        .match({ user_id })
         .single();
 
     if (error) {
@@ -84,8 +84,7 @@ export async function getUserById(user_id) {
 export async function savePawfile(user_id) {
     return await client
         .from('pawfile')
-        .upsert(user_id)
-        .single();
+        .upsert(user_id);
 }
 /* Data functions */
 
