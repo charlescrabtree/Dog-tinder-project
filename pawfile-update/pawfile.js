@@ -16,13 +16,12 @@ pawfileFormEl.addEventListener('submit', async (e) => {
     const name = data.get('pawfile-name');
     const bio = data.get('pawfile-bio');
     const imageFile = data.get('pawfile-image');
-
-
-    await savePawfile({
+    const pawfileObject = {
         user_id: user.id,
         name: name,
         bio: bio,
-    });
+    };
+
 
     if (imageFile.size) {
         const imageName = `${user.id}/${imageFile.name}`;
@@ -32,8 +31,9 @@ pawfileFormEl.addEventListener('submit', async (e) => {
             imageName
         );
     
-        savePawfile.image_url = url;
+        pawfileObject.image_url = url;
     }
+    await savePawfile(pawfileObject);
     displayUser();
     pawfileFormEl.reset();
 });

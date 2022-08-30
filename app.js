@@ -61,10 +61,11 @@ const userContainerEl = document.getElementById('users-container');
 
 async function displayAllUsers() {
     const users = await getAllUsers();
-
+    console.log(users);
 
     for (let user of users) {
         const userDiv = renderAllUsers(user);
+        console.log(user.image_url);
         userContainerEl.append(userDiv);
     }
 
@@ -76,7 +77,8 @@ displayAllUsers();
 async function loadPawfile() {
     const pawfile = await getUserById(user.id);
     if (pawfile && pawfile.image_url) {
-        const pawfileImg = document.getElementById('pawfile-image');
+        const pawfileImg = document.querySelector('.pawfile-image');
+        console.log(pawfileImg);
         pawfileImg.src = pawfile.image_url;
     }
 }
