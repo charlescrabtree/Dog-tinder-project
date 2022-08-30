@@ -98,9 +98,14 @@ export async function addMessage(message) {
     return await client.from('pawfile_chat').insert(message).single();
 }
 
+export async function getAllMessages() {
+    const response = await client.from('pawfile_chat').select('*');
+    return response.data;
+}
 
-export async function getMessageById(pawfile_id) {
-    const resp = await client.from('pawfile_chat').select('*').match({ pawfile_id }).single();
+
+export async function getMessageById(user_id) {
+    const resp = await client.from('pawfile_chat').select('*').match({ user_id }).single();
     
     if (resp.error) {
         throw new Error(resp.error.message);

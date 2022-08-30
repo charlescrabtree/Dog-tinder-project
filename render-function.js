@@ -25,7 +25,7 @@ export function renderAllUsers(user) {
     return userEl;
 }
 
-export function renderComment(comments) {
+export function renderMessage(comments) {
     const commentEl = document.createElement('div');
 
     for (const comment of comments) {
