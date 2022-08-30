@@ -65,7 +65,6 @@ async function displayAllUsers() {
 
     for (let user of users) {
         const userDiv = renderAllUsers(user);
-        console.log(userDiv);
         userContainerEl.append(userDiv);
     }
 
