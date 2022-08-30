@@ -1,5 +1,5 @@
-import { checkAuth, addComment, getMessageById } from '../fetch-utils';
-import { renderComment } from '../render-function.js';
+import { checkAuth, addMessage, getAllMessages } from '../fetch-utils.js';
+import { renderMessage } from '../render-function.js';
 
 const chatFormEl = document.getElementById('chat-form');
 const chatContainerEl = document.getElementById('chat-container');
@@ -10,13 +10,14 @@ checkAuth();
 
 
 
-function displayComments() {
+async function displayComments() {
+    const messages = await getAllMessages();
     chatContainerEl.innerHTML = '';
-    const ul = renderComment(pawfile_chat.message);
-    chatContainerEl.append(ul);
+    for (let message of messages) {
+        const renderChat = renderMessage(message);
+        chatContainerEl.append(renderChat);
+    }
 }
-
-
 
 
 
@@ -25,10 +26,10 @@ chatFormEl.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(chatFormEl);
-    const response = await addComment({ text: formData.get('text') });
-
-    const comment = response.data;
-    customElements.push(comment);
+    const response = await addMessage({ message: formData.get('text') });
+    console.log(formData, response);
+    // const message = response.data;
+    // addMessage(message);
 
     displayComments();
 
