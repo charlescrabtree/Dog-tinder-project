@@ -10,7 +10,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 200px;
     font-family: 'Rubik', san-serif;
     background: rgb(238,174,202);
     background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
@@ -68,3 +68,26 @@ form button {
 
 }
 
+.web-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Titillium Web';
+    font-size: 80px;
+    height: 200px;
+    color: #FEC8D8;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #957DAD, 0 0 20px #957DAD, 0 0 25px #957DAD, 0 0 30px #957DAD, 0 0 35px #957DAD;
+}
+
+#pawfile-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: white;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 1);
+
+
+
+}
