@@ -1,12 +1,15 @@
 .chat-container {
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-content: right;
+    position: sticky;
+    align-items: flex-end;
+    background-color: antiquewhite;
+    opacity: 0.85;
     border: solid black 2px;
     border-radius: 10px;
     box-shadow: 4em;
-    margin: 15px;
+    height: 1000px;
+    width: 600px;
     width: fit-content;
     height: fit-content;
 }
