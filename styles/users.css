@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Roboto&family=The+Nautigal:wght@700&display=swap');
+
+
+header {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 80px;
+    top: 1px;
+    box-shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    display: flex;
+    height: 100%;
+    background-color:#EBCCFF;
+}
+
+nav {
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Rubik', san-serif;
+    color: var(--text-color);
+    background-image: url('../assets/pet-background.PNG');
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.users-container {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    padding: 7px 20px;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #EBCCFF
+}
+
+.all-users-container {
+           flex-wrap: wrap;
+    width: 1500px;
+    height: 1500px;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+
+.img-tag {
+
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.user-div {
+    border-radius: 15px;
+    font-family: 'DynaPuff', cursive;
+    font: 2rem;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    width: 350px;
+    height: 400px;
+    box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
+    background: rgb(238,174,202);
+    background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.page-header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.name-tag {
+    font-size: 2rem;
+}

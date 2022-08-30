@@ -1,10 +1,8 @@
 import { checkAuth, getUserById, savePawfile, uploadImage } from '../fetch-utils.js';
 
 const pawfileFormEl = document.getElementById('pawfile-form');
-//const usersEl = document.getElementById('all-users');
 const nameEl = document.getElementById('pawfile-name');
 const bioEl = document.getElementById('pawfile-bio');
-// const imgEl = document.getElementById('pawfile-image');
 const buttonEl = document.getElementById('add-pawfile');
 
 const user = checkAuth();
@@ -37,14 +35,6 @@ pawfileFormEl.addEventListener('submit', async (e) => {
     displayUser();
     pawfileFormEl.reset();
 });
-
-
-// async function onLoad() {
-
-
-// }
-
-
 
 
 async function displayUser() {
