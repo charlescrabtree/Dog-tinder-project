@@ -81,10 +81,32 @@ export async function getUserById(user_id) {
 
 // }
 
+
+
+
+
+
 export async function savePawfile(user_id) {
     return await client
         .from('pawfile')
         .upsert(user_id);
 }
+
+
+
+export async function addMessage(message) {
+    return await client.from('pawfile_chat').insert(message).single();
+}
+
+
+export async function getMessageById(pawfile_id) {
+    const resp = await client.from('pawfile_chat').select('*').match({ pawfile_id }).single();
+    
+    if (resp.error) {
+        throw new Error(resp.error.message);
+    }
+    return resp.data;
+}
+
 /* Data functions */
 
