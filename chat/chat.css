@@ -8,13 +8,13 @@
     border: solid black 2px;
     border-radius: 10px;
     box-shadow: 4em;
-    height: 1000px;
-    width: 600px;
-    width: fit-content;
+    height: 75%;
+    width: 75%;
+    /* width: fit-content; */
     height: fit-content;
 }
 
-.chat-form {
+/* .chat-form {
     display: flex;
     justify-content: right;
     position: sticky;
@@ -26,9 +26,9 @@
     box-shadow: 4em;
     height: 1000px;
     width: 600px;
-}
+} */
 body {
-    background-image: url('../assets/dog_chat_placeholder.png');
+    background-image: url('../assets/park-picture.png');
     display: flex;
     justify-content: center;
 

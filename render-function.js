@@ -27,11 +27,21 @@ export function renderAllUsers(user) {
 
 export function renderMessage(comment) {
     
+    const dogChat = document.createElement('div');
+    dogChat.classList.add('div-container');
+
+    const avatarEl = document.createElement('img');
+    avatarEl.src = `${comment.pawfile.image_url}`;
+
+    const dogNameEl = document.createElement('p');
+    dogNameEl.textContent = comment.pawfile.name;
+
     const commentP = document.createElement('p');
     commentP.textContent = comment.message;
-        
     
-    return commentP;
+    dogChat.append(avatarEl, dogNameEl, commentP);
+
+    return dogChat;
 }
 
 
