@@ -88,3 +88,21 @@ export async function savePawfile(user_id) {
 }
 /* Data functions */
 
+export async function uploadImage(bucketName, imageFile, imageName) {
+    // const bucket = client.storage.from(bucketName);
+    
+    const response = await client.storage
+        .from('profile-images')
+        .upload(imageName, imageFile, {
+            chacheControl: '3600',
+            upsert: true,
+        });
+
+    if (response.error) {
+        console.log(response.error);
+        return null;
+    }
+    const url = `${SUPABASE_URL}/storage/v1/object/public/${response.data.Key}`;
+
+    return url;
+}
