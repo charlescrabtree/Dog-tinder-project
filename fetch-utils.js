@@ -119,12 +119,6 @@ export async function getMessageById(user_id) {
     return resp.data;
 }
 
-/* Data functions */
-
-
-//write a function that sends message request to supabase pawfile_chat table
-
-
 
 
 export async function uploadImage(bucketName, imageFile, imageName) {
