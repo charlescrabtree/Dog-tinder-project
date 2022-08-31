@@ -12,6 +12,7 @@ checkAuth();
 
 async function displayComments() {
     const messages = await getAllMessages();
+    // make new function for realtime comments
     chatContainerEl.innerHTML = '';
     for (let message of messages) {
         const userId = await getUserById(message.pawfile_id);
@@ -39,9 +40,10 @@ displayComments();
 
 
 const pawFileChat = client 
-    .from('*')
-    .on('*', payload => {
+    .from('pawfile_chat')
+    .on('INSERT', payload => {
         console.log('Change received!', payload);
     })
     .subscribe();
-console.log('ok subcribbbbd');
+
+// 
