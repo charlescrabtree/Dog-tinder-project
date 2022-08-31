@@ -50,7 +50,8 @@ body {
 .img-tag {
 border-radius: 15px;
     max-width: 200px;
-    max-height: 200px;
+    max-height: 200px; 
+    box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
 }
 
 .user-div {
