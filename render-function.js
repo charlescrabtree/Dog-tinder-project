@@ -1,3 +1,4 @@
+
 export function renderAllUsers(user) {
     const userEl = document.createElement('div');
     userEl.classList.add('user-div');
@@ -25,22 +26,36 @@ export function renderAllUsers(user) {
     return userEl;
 }
 
-export function renderMessage(comment, user) {
-    
+export function renderMessage(comment, user, currentUser) {
     const dogChat = document.createElement('div');
     dogChat.classList.add('div-container');
+
+    const userContainer = document.createElement('div');
+    userContainer.classList.add('user-container');
+
+
+    if (user.user_id === currentUser.id) {
+        dogChat.classList.add('your-message');
+    }
+
+
 
     const avatarEl = document.createElement('img');
     avatarEl.classList.add('avatar-class');
     avatarEl.src = user.image_url;
 
     const dogNameEl = document.createElement('p');
-    dogNameEl.textContent = `${user.name}:`;
+    dogNameEl.classList.add('username');
+    dogNameEl.textContent = `${user.name}`;
 
     const commentP = document.createElement('p');
+    commentP.classList.add('commentP');
     commentP.textContent = comment.message;
     
-    dogChat.append(avatarEl, dogNameEl, commentP);
+
+    userContainer.append(avatarEl, dogNameEl);
+
+    dogChat.append(userContainer, commentP);
 
     return dogChat;
 }
