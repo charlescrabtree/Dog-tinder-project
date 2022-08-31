@@ -1,4 +1,4 @@
-import { checkAuth, getUserById, savePawfile, uploadImage } from '../fetch-utils.js';
+import { checkAuth, getUserById, savePawfile, uploadImage, signOutUser } from '../fetch-utils.js';
 
 const pawfileFormEl = document.getElementById('pawfile-form');
 const nameEl = document.getElementById('pawfile-name');
@@ -6,6 +6,11 @@ const bioEl = document.getElementById('pawfile-bio');
 const buttonEl = document.getElementById('add-pawfile');
 
 const user = checkAuth();
+
+const signOutLink = document.getElementById('sign-out-link');
+
+signOutLink.addEventListener('click', signOutUser);
+
 
 pawfileFormEl.addEventListener('submit', async (e) => {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import { checkAuth, addMessage, getAllMessages, getUserById, client, signOutUser } from '../fetch-utils.js';
+import { checkAuth, addMessage, getAllMessages, getUserById, client, signOutUser, getMessageById, onMessage } from '../fetch-utils.js';
 import { renderMessage } from '../render-function.js';
 
 const chatFormEl = document.getElementById('chat-form');
@@ -33,7 +33,7 @@ chatFormEl.addEventListener('submit', async (e) => {
     const formData = new FormData(chatFormEl);
     await addMessage({ message: formData.get('text') });
 
-  
+
     // displayComments();
     chatFormEl.reset();
 });
@@ -47,7 +47,16 @@ const pawFileChat = client
     .from('pawfile_chat')
     .on('INSERT', payload => {
         console.log('Change received!', payload);
+        handleNewMessage();
     })
     .subscribe();
 
+// We need a handleNewMessage Function that renders messages in realtime
+// It'll grab a new message
+//The message will be displayed instantly, based on upload date.
 // 
+
+async function handleNewMessage(message) {
+    // const messageId = await getMessageById(message.id);
+    console.log(message);
+}
