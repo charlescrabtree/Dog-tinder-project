@@ -3,15 +3,15 @@ body {
     display: flex;
     justify-content: center;
     margin: 0px;
-   min-height: 100%;
-   width: 100%;
+    min-height: 100%;
+    width: 100%;
 
 }
 
 html {
-   margin: 0px;
-   height: 100%;
-   width: 100%;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -28,20 +28,21 @@ html {
 
 
 .chat-container {
-    display: flex;
+    display: grid;
     justify-content: flex-start;
-     display: flex;
-    position: sticky;
+    
     align-items: flex-end;
     background-color: antiquewhite;
     opacity: 0.85;
     border: solid black 2px;
     border-radius: 10px;
-    box-shadow: 4em;
-    height: 75%;
-    width: 75%;
-    height: fit-content;
+    max-height: 20%;
+    max-width: 40%;
+    /* height: fit-content; */
+    overflow-y: scroll;
+    position: relative;
 }
+
 
 .nav {
     width: 100%;

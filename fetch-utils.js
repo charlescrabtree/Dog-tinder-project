@@ -1,7 +1,7 @@
 const SUPABASE_URL = 'https://mtegvpmustvqjcrpqjft.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10ZWd2cG11c3R2cWpjcnBxamZ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTk2MzgyMTYsImV4cCI6MTk3NTIxNDIxNn0.1qATbqaxyJY3HmYMZsX0LcLV6_XXcgd_qnE96O4JeR8';
 
-const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+export const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 /* Auth related functions */
 
@@ -100,12 +100,16 @@ export async function savePawfile(user_id) {
 
 export async function addMessage(message) 
 {
-   
+
     return await client.from('pawfile_chat').insert(message).single();
 }
 
 export async function getAllMessages() {
-    const response = await client.from('pawfile_chat').select('*');
+    const response = await client.from('pawfile_chat').select('*').order('id');
+    let { data: pawfile_chat, error } = await client
+        .from('pawfile_chat')
+        .select('*');
+
     return response.data;
 }
 
@@ -127,7 +131,7 @@ export async function uploadImage(bucketName, imageFile, imageName) {
     const response = await client.storage
         .from('profile-images')
         .upload(imageName, imageFile, {
-            chacheControl: '3600',
+            cacheControl: '3600',
             upsert: true,
         });
 
