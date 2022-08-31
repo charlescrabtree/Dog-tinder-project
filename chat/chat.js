@@ -35,7 +35,7 @@ chatFormEl.addEventListener('submit', async (e) => {
         })
         .subscribe();
         
-    displayComments();
+    // displayComments();
     chatFormEl.reset();
 });
 
