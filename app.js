@@ -14,11 +14,9 @@ signOutLink.addEventListener('click', signOutUser);
 
 async function displayAllUsers() {
     const users = await getAllUsers();
-    console.log(users);
 
     for (let user of users) {
         const userDiv = renderAllUsers(user);
-        console.log(user.image_url);
         userContainerEl.append(userDiv);
     }
 

@@ -17,24 +17,24 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="pawfile.css" />
     
-    <title>Supabase Web App</title>
+    <title>🐾 Ebarkony 🐾</title>
 </head>
 
 <body>
+    <main class="entire-page"> 
     <header class="page-header">
         <img class="logo" src="">
         <div><p class="title">Ebarkony</p></div>
-        <nav>
-            <a id="sign-out-link" href="../auth">Sign out</a>
-            <a href="../index.html">Pawfiles</a>
-            <a href="../creator-page/index.html">Creator Page</a>
-            <a href="../chat/chat.html">Chat</a>
+        <nav class="nav">
+            <a class="nav-link" id="sign-out-link" href="../auth">Sign out</a>
+            <a class="nav-link" href="../index.html">Pawfiles</a>
+            <a class="nav-link" href="../creator-page/index.html">Creator Page</a>
+            <a class="nav-link" href="../chat/chat.html">Chat</a>
         
         </nav>
     </header>
-<h1 class="web-title">🐾 Welcome to Ebarkony! 🐾
-</h1>
-    <main> 
+        <h1 class="web-title">🐾 Welcome to Ebarkony! 🐾
+        </h1>
         <form id="pawfile-form">
             <section>
             <h3>Pawfile Name</h3>
@@ -43,9 +43,8 @@
             </section>
 
             <section id="pawfile-img-container">
-                <h3>Pawfile Edtior</h3>
-                <!--the name will have to correspond with supabase table??? -->
-                <input type="file" name="pawfile-image" id="pawfile-image">
+                <h3>Pawfile Avatar</h3>
+                <input type="file" name="pawfile-image" id="pawfile-image" class="pawfile-avatar">
             </section>
 
             <label>
@@ -53,7 +52,7 @@
                 <textarea name="pawfile-bio" id="pawfile-bio" cols="30" rows="10" placeholder="'pawfile bio'"></textarea>
             </label>
             <div></div>
-            <button id="add-pawfile"> Update Pawfile </button>
+            <button id="add-pawfile" class="update-pawfile"> Update Pawfile </button>
         </form>
     </main>
 

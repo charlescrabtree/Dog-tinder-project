@@ -5,7 +5,8 @@ const chatFormEl = document.getElementById('chat-form');
 const chatContainerEl = document.getElementById('chat-container');
 
 
-checkAuth();
+const currentUser = checkAuth();
+
 
 
 
@@ -16,7 +17,7 @@ async function displayComments() {
     chatContainerEl.innerHTML = '';
     for (let message of messages) {
         const userId = await getUserById(message.pawfile_id);
-        const renderChat = renderMessage(message, userId);
+        const renderChat = renderMessage(message, userId, currentUser);
         chatContainerEl.append(renderChat);
     }
 }
