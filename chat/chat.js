@@ -19,14 +19,25 @@ async function displayComments() {
     // make new function for realtime comments
     chatContainerEl.innerHTML = '';
     for (let message of messages) {
-        const userId = await getUserById(message.pawfile_id);
-        const renderChat = renderMessage(message, userId, currentUser);
-        chatContainerEl.append(renderChat);
+        displayMessage(message);
     }
 }
 
+async function displayMessage(message) {
+    const userId = await getUserById(message.pawfile_id);
+    const renderChat = renderMessage(message, userId, currentUser);
+    chatContainerEl.append(renderChat);
 
-
+    renderChat.scrollIntoView({
+        behavior: 'smooth'
+    });
+    // chatContainerEl.scrollTop = scro
+//     ({
+//         top: Math.Infinity,
+//         behavior: 'smooth'
+//     });
+// 
+}
 
 chatFormEl.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -42,21 +53,7 @@ chatFormEl.addEventListener('submit', async (e) => {
 displayComments();
 
 
-
-const pawFileChat = client 
-    .from('pawfile_chat')
-    .on('INSERT', payload => {
-        console.log('Change received!', payload);
-        handleNewMessage();
-    })
-    .subscribe();
-
-// We need a handleNewMessage Function that renders messages in realtime
-// It'll grab a new message
-//The message will be displayed instantly, based on upload date.
-// 
-
-async function handleNewMessage(message) {
-    // const messageId = await getMessageById(message.id);
-    console.log(message);
-}
+onMessage(payload => {
+    
+    displayMessage(payload.new);
+});

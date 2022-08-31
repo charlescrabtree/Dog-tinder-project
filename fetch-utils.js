@@ -144,9 +144,16 @@ export async function uploadImage(bucketName, imageFile, imageName) {
     return url;
 }
 
-export function onMessage(pawfile_id, handleNewMessage) {
+// export function onMessage(pawfile_id, handleNewMessage) {
+//     client 
+//         .from(`message:pawfile_chat=eq.${pawfile_id}`)
+//         .on('INSERT', handleNewMessage)
+//         .subscribe();
+// }
+
+export async function onMessage(handleNewMessage) {
     client 
-        .from(`message:pawfile_chat=eq.${pawfile_id}`)
+        .from('pawfile_chat')
         .on('INSERT', handleNewMessage)
         .subscribe();
 }
