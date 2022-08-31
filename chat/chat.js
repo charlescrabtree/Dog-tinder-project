@@ -28,13 +28,7 @@ chatFormEl.addEventListener('submit', async (e) => {
     const formData = new FormData(chatFormEl);
     await addMessage({ message: formData.get('text') });
 
-    await client 
-        .from('pawfile_chat')
-        .on('*', async payload => {
-            console.log('Change received!', payload);
-        })
-        .subscribe();
-        
+  
     // displayComments();
     chatFormEl.reset();
 });
@@ -44,6 +38,10 @@ displayComments();
 
 
 
-
-
-
+const pawFileChat = client 
+    .from('*')
+    .on('*', payload => {
+        console.log('Change received!', payload);
+    })
+    .subscribe();
+console.log('ok subcribbbbd');
