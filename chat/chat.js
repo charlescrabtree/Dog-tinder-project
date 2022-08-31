@@ -1,4 +1,4 @@
-import { checkAuth, addMessage, getAllMessages, getUserById, client } from '../fetch-utils.js';
+import { checkAuth, addMessage, getAllMessages, getUserById, client, signOutUser } from '../fetch-utils.js';
 import { renderMessage } from '../render-function.js';
 
 const chatFormEl = document.getElementById('chat-form');
@@ -7,8 +7,11 @@ const chatContainerEl = document.getElementById('chat-container');
 
 const currentUser = checkAuth();
 
+checkAuth();
 
+const signOutLink = document.getElementById('sign-out-link');
 
+signOutLink.addEventListener('click', signOutUser);
 
 
 async function displayComments() {
