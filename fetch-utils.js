@@ -114,6 +114,16 @@ export async function uploadImage(bucketName, imageFile, imageName) {
     return url;
 }
 
+
+
+export async function getSingleUser(user_id) {
+    const response = await client.from('pawfile').select().match({ user_id }).single();
+    return response.data;
+}
+
+
+
+
 export async function onMessage(handleNewMessage) {
     client 
         .from('pawfile_chat')
