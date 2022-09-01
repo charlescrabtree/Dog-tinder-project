@@ -1,4 +1,4 @@
-import { checkAuth, addMessage, getAllMessages, getUserById, client, signOutUser, getMessageById, onMessage } from '../fetch-utils.js';
+import { checkAuth, addMessage, getAllMessages, getUserById, signOutUser, onMessage } from '../fetch-utils.js';
 import { renderMessage } from '../render-function.js';
 
 const chatFormEl = document.getElementById('chat-form');
