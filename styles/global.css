@@ -282,4 +282,47 @@ input#file-upload-button {
 }
 
 
+.tanner-icons {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: #CCF3EE;
+    background-color: black;
+    margin: .5rem;
+}
 
+.lawson-icons {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color:rgb(222, 237, 16);
+    background-color: black;
+    margin: .5rem;
+}
+
+.emily-icons {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color:#F9CEEE;
+    background-color: black;
+    margin: .5rem;
+}
+
+.zach-icons {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: #F9F3EE;
+    background-color: black;
+    margin: .5rem;
+}
+
+.charlie-icons {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: #97C4B8;
+    background-color: black;
+    margin: .5rem;
+}

@@ -145,3 +145,10 @@ form button {
     margin: 1rem;
     color: #8F54A0;
 }
+
+.default-avatar {
+  width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    object-fit: cover;
+}
