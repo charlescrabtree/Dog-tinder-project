@@ -77,13 +77,13 @@ export async function addMessage(message)
 
 export async function getAllMessages() {
     const response = await client.from('pawfile_chat').select('*').order('id');
-    let { data: pawfile_chat, error } = await client
+    await client
         .from('pawfile_chat')
         .select('*');
 
     return response.data;
 }
-
+//REMOVED A COUPLE THING FROM LINE 80 AND IT FIXED LINT. let { data: pawfile_chat, error }
 export async function getMessageById(user_id) {
     const resp = await client
         .from('pawfile_chat')
