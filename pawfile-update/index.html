@@ -49,11 +49,17 @@
                 <input type="file" name="pawfile-image" id="pawfile-image" class="pawfile-avatar">
             </section>
 
-            <label>
+            <label class="pawfile-bio">
                 <h3>Pawfile Bio</h3>
-                <textarea name="pawfile-bio" id="pawfile-bio" cols="30" rows="10" placeholder="'pawfile bio'"></textarea>
+                <div class="placeholder">
+                <textarea name="pawfile-bio" id="pawfile-bio" cols="30" rows="10" required placeholder="
+                Breed:
+                Age:
+                Pedigree:
+                Fun Facts:">
+            </textarea>
+        </div>
             </label>
-            <div></div>
             <button id="add-pawfile" class="update-pawfile"> Update Pawfile </button>
         </form>
     </main>
