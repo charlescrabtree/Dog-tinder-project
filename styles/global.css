@@ -30,9 +30,9 @@ body {
     background-color: var(--header-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background: rgb(238,174,202);
-background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-font-family: 'Fascinate', cursive;
-font-family: 'Space Mono', monospace;
+    background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-family: 'Fascinate', cursive;
+    font-family: 'Space Mono', monospace;
 }
 
 .page-header .title {
@@ -79,48 +79,19 @@ footer {
     
 }
 
-
 .creator-images {
     width: 80%;
     height: 350px;
-display: flex;    
+    display: flex;    
     justify-content: space-around;
     margin: auto;
 }
 
-.charlie-img {
+.creator-img {
     box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
-width: 300px;
-height: 300px;
-border-radius: 10px;
-}
-
-.emily-img {
-    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
-width: 300px;
-height: 300px;
-border-radius: 10px;
-}
-
-.lawson-img {
-    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
-width: 300px;
-height: 300px;
-border-radius: 10px;
-}
-
-.tanner-img {
-    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
-width: 300px;
-height: 300px;
-border-radius: 10px;
-}
-
-.zach-img {
-    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
-width: 300px;
-height: 300px;
-border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
 }
 
 .creator-title {
@@ -132,38 +103,37 @@ border-radius: 10px;
 .charlie-info {
     display: flex;
     flex-direction: column;
-width: 300px;
-height: 300px;
-
+    width: 300px;
+    height: 300px;
 }
 
 .emily-info {
     display: flex;
-     flex-direction: column;
-width: 300px;
-height: 300px;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
 }
 
 .lawson-info {
     position: sticky;
     display: flex;
-     flex-direction: column;
-width: 300px;
-height: 300px;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
 }
 
 .tanner-info {
     display: flex;
-     flex-direction: column;
-width: 300px;
-height: 300px;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
 }
- 
+
 .zach-info {
     display: flex;
-     flex-direction: column;
-width: 300px;
-height: 300px;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
 }
 
 .creator-info {
@@ -174,7 +144,6 @@ height: 300px;
     margin: auto;
 }
 
-
 .linked-in {
     width: 40px;
     height: 40px;
@@ -182,10 +151,11 @@ height: 300px;
 }
 
 .git-hub {
-     width: 40px;
+    width: 40px;
     height: 40px;
-     border-radius: 15px;
+    border-radius: 15px;
 }
+
 form {
     width: 100%;
     margin: auto;
@@ -208,7 +178,6 @@ form button {
     padding: 7px;
     border-radius:8px;
     
-
 }
 
 form textarea {
@@ -224,12 +193,10 @@ input#file-upload-button {
     cursor: pointer;
 }
 
-
 .nav-link{
-   margin: 1rem;
+    margin: 1rem;
     color: #8F54A0;
 }
-
 
 .nav {
     top: 0%;
@@ -246,14 +213,13 @@ input#file-upload-button {
 }
 
 .entire-page {
-     width: 100vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 
 .navs {
     top: 0%;
@@ -277,8 +243,8 @@ input#file-upload-button {
 
 .creator-name-tag {
     font-family: 'DynaPuff', cursive;
-     font-weight: bold;
-     font-size: 1.7rem;
+    font-weight: bold;
+    font-size: 1.7rem;
 }
 
 
@@ -295,7 +261,7 @@ input#file-upload-button {
     width: 60px;
     height: 60px;
     border-radius: 10px;
-    color:rgb(222, 237, 16);
+    color:#a66db6;
     background-color: black;
     margin: .5rem;
 }

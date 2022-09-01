@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Roboto&family=The+Nautigal:wght@700&display=swap');
 
-
 header {
     justify-content: flex-start;
     align-items: flex-start;
@@ -23,11 +22,11 @@ body {
     background-image: url('../assets/pet-background.PNG');
     display: grid;
     grid-template-rows: auto 1fr auto;
-   
+
 }
 
 .users-container {
-   
+
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
@@ -37,13 +36,13 @@ body {
 
 
 .all-users-container {
-           flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 100vw;
     height: 1500px;
     display: flex;
     align-content: flex-start;
     flex-direction: row-reverse;
-     justify-content: center;
+    justify-content: center;
 }
 
 

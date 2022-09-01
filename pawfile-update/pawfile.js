@@ -6,12 +6,10 @@ const bioEl = document.getElementById('pawfile-bio');
 const buttonEl = document.getElementById('add-pawfile');
 const avatarEl = document.getElementById('avatar');
 const avatarPreviewEl = document.getElementById('pawfile-image');
+const signOutLink = document.getElementById('sign-out-link');
 const user = checkAuth();
 
-const signOutLink = document.getElementById('sign-out-link');
-
 signOutLink.addEventListener('click', signOutUser);
-
 
 pawfileFormEl.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -24,14 +22,12 @@ pawfileFormEl.addEventListener('submit', async (e) => {
 
     avatarEl.src = URL.createObjectURL(file);
 
-
     const pawfileObject = {
         user_id: user.id,
         name: name,
         bio: bio,
     
     };
-
 
     if (imageFile.size) {
         const imageName = `${user.id}/${imageFile.name}`;
@@ -48,10 +44,6 @@ pawfileFormEl.addEventListener('submit', async (e) => {
     pawfileFormEl.reset();
 });
 
-
-
-    
-
 async function displayUser() {
     const response = await getUserById(user.id);
     if (!response) {
@@ -66,5 +58,3 @@ async function displayUser() {
 }
 
 displayUser();
-
-

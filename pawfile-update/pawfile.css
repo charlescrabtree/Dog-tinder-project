@@ -152,3 +152,7 @@ form button {
     border-radius: 100%;
     object-fit: cover;
 }
+
+textarea::placeholder {
+  display: flex;
+}
