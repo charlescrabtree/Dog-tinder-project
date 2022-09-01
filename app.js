@@ -1,9 +1,8 @@
-import { checkAuth, signOutUser, getUserById, getAllUsers, } from './fetch-utils.js';
+import { checkAuth, signOutUser, getAllUsers, } from './fetch-utils.js';
 import { renderAllUsers } from './render-function.js';
 
 const signOutLink = document.getElementById('sign-out-link');
 const userContainerEl = document.getElementById('users-container');
-const user = checkAuth();
 checkAuth();
 
 signOutLink.addEventListener('click', signOutUser);
@@ -17,14 +16,4 @@ async function displayAllUsers() {
     }
 }
 
-async function loadPawfile() {
-    const pawfile = await getUserById(user.id);
-    if (pawfile && pawfile.image_url) {
-        const pawfileImg = document.querySelector('.pawfile-image');
-        console.log(pawfileImg);
-        pawfileImg.src = pawfile.image_url;
-    }
-}
-
 displayAllUsers();
-loadPawfile();

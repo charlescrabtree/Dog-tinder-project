@@ -1,4 +1,4 @@
-import { checkAuth, addMessage, getAllMessages, getUserById, signOutUser, onMessage } from '../fetch-utils.js';
+import { checkAuth, addMessage, getAllMessages, getUserById, signOutUser, onMessage, deleteMessage } from '../fetch-utils.js';
 import { renderMessage } from '../render-function.js';
 
 const chatFormEl = document.getElementById('chat-form');
@@ -22,6 +22,17 @@ async function displayComments() {
 async function displayMessage(message) {
     const userId = await getUserById(message.pawfile_id);
     const renderChat = renderMessage(message, userId, currentUser);
+    const deleteButton = document.createElement('button');
+    if (userId.id === userId.pawfile_id) {
+        chatContainerEl.append(deleteButton);
+        deleteButton.textContent = 'Delete Message';
+
+        deleteButton.addEventListener('click', async () => {
+            await deleteMessage(message.id);
+            alert('You deleted your message');
+        });
+    }
+    
     chatContainerEl.append(renderChat);
 
     renderChat.scrollIntoView({
