@@ -121,9 +121,6 @@ export async function getSingleUser(user_id) {
     return response.data;
 }
 
-
-
-
 export async function onMessage(handleNewMessage) {
     client 
         .from('pawfile_chat')
@@ -137,5 +134,24 @@ export async function deleteMessage(id) {
         .delete()
         .match({ id });
     
+    return response.data;
+}
+
+export async function getAllDetailComments(target_id) {
+    const response = await client
+        .from('comments')
+        .select('*')
+        .match({ target_id });
+
+    return response.data;        
+}
+
+export async function createDetailComment(comment, target_id) {
+    const response = await client
+        .from('comments')
+        .insert({
+            message: comment, target_id: target_id
+        });
+        
     return response.data;
 }

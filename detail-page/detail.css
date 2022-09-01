@@ -116,7 +116,7 @@ form button {
     list-style: none;
     padding: 0;
     margin: 1rem;
-    height: 400px;
+
     background-color: #F9CEEE;
     width: 50vw;
     border-radius: 15px;
@@ -127,4 +127,25 @@ form button {
 }
 
 
-
+.div-container {
+    width: 50%;
+    display: flex;
+    margin: 3px;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 15px;
+}
+.user-container {
+    background-color: #4444441e;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+}
+.commentP {
+    font-size: 1rem;
+}
