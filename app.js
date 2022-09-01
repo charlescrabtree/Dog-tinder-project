@@ -1,16 +1,12 @@
 import { checkAuth, signOutUser, getUserById, getAllUsers, } from './fetch-utils.js';
 import { renderAllUsers } from './render-function.js';
 
-checkAuth();
-const user = checkAuth();
-
-
-const userContainerEl = document.getElementById('users-container');
 const signOutLink = document.getElementById('sign-out-link');
-
+const userContainerEl = document.getElementById('users-container');
+const user = checkAuth();
+checkAuth();
 
 signOutLink.addEventListener('click', signOutUser);
-
 
 async function displayAllUsers() {
     const users = await getAllUsers();
@@ -19,10 +15,7 @@ async function displayAllUsers() {
         const userDiv = renderAllUsers(user);
         userContainerEl.append(userDiv);
     }
-
 }
-
-
 
 async function loadPawfile() {
     const pawfile = await getUserById(user.id);

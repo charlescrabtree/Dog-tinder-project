@@ -1,4 +1,3 @@
-
 export function renderAllUsers(user) {
     const userEl = document.createElement('div');
     userEl.classList.add('user-div');
@@ -12,16 +11,11 @@ export function renderAllUsers(user) {
     imgEl.classList.add('img-tag');
     imgEl.src = user.image_url;
 
-
-
-
     const bioEl = document.createElement('p');
     bioEl.classList.add('bio-tag');
     bioEl.textContent = user.bio;
 
-
     userEl.append(nameEl, imgEl, bioEl);
-
 
     return userEl;
 }
@@ -33,12 +27,9 @@ export function renderMessage(comment, user, currentUser) {
     const userContainer = document.createElement('div');
     userContainer.classList.add('user-container');
 
-
     if (user.user_id === currentUser.id) {
         dogChat.classList.add('your-message');
     }
-
-
 
     const avatarEl = document.createElement('img');
     avatarEl.classList.add('avatar-class');
@@ -53,13 +44,9 @@ export function renderMessage(comment, user, currentUser) {
     console.log(comment.message.replace(/(http|https|ftp):\/\/(\S*)/g, match => `<a target = "_blank" href = "${match}">${match}</a> `));
     commentP.innerHTML = comment.message.replace(/(http|https|ftp):\/\/(\S*)/g, match => `<a target = "_blank" href = "${match}">${match}</a> `);
     
-
     userContainer.append(avatarEl, dogNameEl);
 
     dogChat.append(userContainer, commentP);
 
     return dogChat;
 }
-
-
-

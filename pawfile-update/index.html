@@ -15,11 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="pawfile.css" />
-    
+    <link rel="stylesheet" href="pawfile.css" /> 
     <title>🐾 Ebarkony 🐾</title>
 </head>
-
 <body>
     <main class="entire-page"> 
     <header class="page-header">
@@ -29,8 +27,7 @@
             <a class="nav-link" id="sign-out-link" href="../auth">Sign out</a>
             <a class="nav-link" href="../index.html">Pawfiles</a>
             <a class="nav-link" href="../creator-page/index.html">Creator Page</a>
-            <a class="nav-link" href="../chat/chat.html">Chat</a>
-        
+            <a class="nav-link" href="../chat/chat.html">Dog Park</a>
         </nav>
     </header>
         <h1 class="web-title">🐾 Welcome to Ebarkony! 🐾
@@ -39,34 +36,24 @@
             <section>
             <h3>Pawfile Name</h3>
                 <input id="pawfile-name" name="pawfile-name" placeholder="'Name of Pawfile'">
-                
             </section>
-
             <section id="pawfile-img-container">
                 <h3>Pawfile Avatar</h3>
                 <img src="../assets/default-dog-image.png" class="default-avatar" id="avatar" alt="preview-dog-picture">
-                
                 <input type="file" name="pawfile-image" id="pawfile-image" class="pawfile-avatar">
             </section>
-
             <label class="pawfile-bio">
                 <h3>Pawfile Bio</h3>
-                <div class="placeholder">
                 <textarea name="pawfile-bio" id="pawfile-bio" cols="30" rows="10" required placeholder="
                 Breed:
                 Age:
                 Pedigree:
                 Fun Facts:">
-            </textarea>
-        </div>
+                </textarea>
             </label>
             <button id="add-pawfile" class="update-pawfile"> Update Pawfile </button>
         </form>
     </main>
-
-
-    <!-- <script type="module" src="../app.js"></script> -->
     <script type="module" src="pawfile.js"></script>
 </body>
-
 </html>
