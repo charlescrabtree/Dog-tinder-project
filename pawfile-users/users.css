@@ -80,7 +80,7 @@ border-radius: 15px;
 
 .name-tag {
     font-size: 2rem;
-}
+    text-decoration: none;
 
 .sideMenu {
 	height: 100%;
