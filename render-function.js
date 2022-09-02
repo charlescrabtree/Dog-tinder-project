@@ -59,6 +59,8 @@ export function renderSingleUser(user) {
     const userEl = document.createElement('div');
     userEl.classList.add('user-div');
     
+    const nameContainer = document.createElement('div');
+    nameContainer.classList.add('name-container');
 
     const nameEl = document.createElement('p');
     nameEl.classList.add('name-tag');
@@ -71,8 +73,11 @@ export function renderSingleUser(user) {
     const bioEl = document.createElement('p');
     bioEl.classList.add('bio-tag');
     bioEl.textContent = user.bio;
+    bioEl.title = user.bio;
 
-    userEl.append(nameEl, imgEl, bioEl);
+    nameContainer.append(imgEl, nameEl);
+    
+    userEl.append(nameContainer, bioEl);
 
     return userEl;
 }
