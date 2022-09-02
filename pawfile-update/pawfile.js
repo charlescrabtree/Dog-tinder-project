@@ -5,7 +5,6 @@ const nameEl = document.getElementById('pawfile-name');
 const bioEl = document.getElementById('pawfile-bio');
 const buttonEl = document.getElementById('add-pawfile');
 const avatarEl = document.getElementById('avatar');
-const avatarPreviewEl = document.getElementById('pawfile-image');
 const signOutLink = document.getElementById('sign-out-link');
 const user = checkAuth();
 
@@ -18,10 +17,6 @@ pawfileFormEl.addEventListener('submit', async (e) => {
     const name = data.get('pawfile-name');
     const bio = data.get('pawfile-bio');
     const imageFile = data.get('pawfile-image');
-
-    // const file = avatarPreviewEl.files[0];
-
-    // avatarEl.src = URL.createObjectURL(file);
 
     const pawfileObject = {
         user_id: user.id,
