@@ -1,26 +1,63 @@
-## The Golden Rule:
+Barkle
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+### || DEV Team ||
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+Charles Crabtree
 
-## Making a plan
+[LinkedIn]  https://www.linkedin.com/in/charles-crabtree
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-1. **For each HTML element ask: Why do I need this?**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-1. **Think about how to validate each of your features according to a Definition of Done**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+[GitHub]  https://github.com/charlescrabtree
 
-Additional considerations:
+Emily Pisaygnane
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+[LinkedIn]  https://www.linkedin.com/in/emily-pisaygnane/
+
+[GitHub]  https://github.com/emilypisaygnane
+
+Lawson McPhetridge
+
+[LinkedIn]  https://www.linkedin.com/in/lawson-mcphetridge/
+
+[GitHub] https://github.com/lawsonmcphetridge
+
+Tanner Richards
+
+[LinkedIn]  https://www.linkedin.com/in/tanner-richards-5b1b1b1b1/
+
+[GitHub]  https://github.com/TannerRichards990
+
+Zach Sultan
+
+[LinkedIn] https://www.linkedin.com/in/zachary-sultan/
+
+[GitHub]  https://github.com/Zacharyjsultan
+
+### || What is Barkle? ||
+
+Barkle is a social chat app made for dog owners to meet and connect with others.
+
+### || How does it work? ||
+
+Sign up, or sign in
+
+After signing up, you'll be redirected to 'My Pawfile.' You can add your information there. You'll be able to edit your name, pawfile picture, and bio at anytime.
+
+'Pawfiles' will show all available users on Barkle, and their details if you click on the pawfile user.
+
+'Dog Park' will take you to the chat feature so you can chat with everyone, in a forum style.
+
+### || Deployed Site ||
+
+[Netlify]
+
+- check out our app below-
+
+https://coruscating-dasik-e76837.netlify.app/
+
+### || Our Plan ||
+
+[Whimsical] 
+
+- allows non-collaborators to view whimsical board -
+
+https://whimsical.com/ebarkony-VDG4V5kwhedWm4S2tywpSn

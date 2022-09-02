@@ -62,7 +62,6 @@ body {
     color: #8F54A0;
 }
 
-
 .img-tag {
     border-radius: 15px;
     height: 100px;
@@ -105,10 +104,6 @@ body {
     border-radius: 15px;
     height: 100%;
 }
-.user-div {
-
-}
-
 
 .div-container {
     width: 50%;
@@ -134,15 +129,18 @@ body {
 }
 
 .chat-list {
-        scrollbar-width: auto;
+    scrollbar-width: auto;
     scrollbar-color: #8f54a0 #ffffff;
 
 }
 
 .avatar-class {
-       border-radius: 100%;
+    border-radius: 100%;
     max-width: 70px;
     max-height: 70px;
+    border-radius: 15px;
+    max-width: 200px;
+    max-height: 200px;
     box-shadow: -6px 5px 15px 5px rgb(0 0 0 / 75%);
 }
 
@@ -154,7 +152,7 @@ body {
 }
 
 .chat-container {
-     background-color: #F9CEEE;
+    background-color: #F9CEEE;
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;

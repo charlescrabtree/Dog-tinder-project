@@ -6,8 +6,6 @@ export function renderAllUsers(user) {
     const userEl = document.createElement('div');
     userEl.classList.add('user-div');
     
-
-
     const nameEl = document.createElement('p');
     nameEl.classList.add('name-tag');
     nameEl.textContent = user.name;
@@ -16,7 +14,6 @@ export function renderAllUsers(user) {
     imgEl.classList.add('img-tag');
     imgEl.src = user.image_url;
 
-    
     userEl.append(nameEl, imgEl);
 
     a.append(userEl);
@@ -62,6 +59,7 @@ export function renderSingleUser(user) {
     
     const nameContainer = document.createElement('div');
     nameContainer.classList.add('name-container');
+
 
     const nameEl = document.createElement('p');
     nameEl.classList.add('name-tag');
