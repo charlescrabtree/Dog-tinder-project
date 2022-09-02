@@ -26,8 +26,9 @@
             </div>
         </div>
         
+        <div id="content-area">
             <span onclick="openNav()" href="javascript:void(0)" style="font-size:30px;cursor:pointer">☰ MENU</span>
-        
+        </div>
             <div class="entire-page">
         <h1 class="dog-park-title">Dog Park</h1>
         <section class="chat-container">
@@ -39,18 +40,18 @@
             <button class="chat-button">Send message</button>
         </form>
     </div>
-    <script>
-        function openNav() {
-        document.getElementById("side-menu").style.width = "300px";
-        document.getElementById("content-area").style.marginLeft = "300px"; 
-        }
-    
-        function closeNav() {
-        document.getElementById("side-menu").style.width = "0";
-        document.getElementById("content-area").style.marginLeft= "0";  
-        }
-        </script>
 </body>
+<script>
+    function openNav() {
+    document.getElementById("side-menu").style.width = "300px";
+    document.getElementById("content-area").style.marginLeft = "300px"; 
+    }
+
+    function closeNav() {
+    document.getElementById("side-menu").style.width = "0";
+    document.getElementById("content-area").style.marginLeft= "0";  
+    }
+    </script>
 <script type="module" src="chat.js"></script>
 
 </html>
