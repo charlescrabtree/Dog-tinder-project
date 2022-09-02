@@ -21,7 +21,7 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-.page-header {
+/* .page-header {
     position: static;
     top: 0;
     padding: 0 10px;
@@ -30,10 +30,12 @@ body {
     background-color: var(--header-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background: rgb(238,174,202);
-    background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    font-family: 'Fascinate', cursive;
-    font-family: 'Space Mono', monospace;
-}
+background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+font-family: 'Fascinate', cursive;
+font-family: 'Space Mono', monospace;
+} */
+
+
 
 .page-header .title {
     font-size: 2rem;
@@ -79,19 +81,48 @@ footer {
     
 }
 
+
 .creator-images {
     width: 80%;
     height: 350px;
-    display: flex;    
+display: flex;    
     justify-content: space-around;
     margin: auto;
 }
 
-.creator-img {
+.charlie-img {
     box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.emily-img {
+    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.lawson-img {
+    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.tanner-img {
+    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
+width: 300px;
+height: 300px;
+border-radius: 10px;
+}
+
+.zach-img {
+    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
+width: 300px;
+height: 300px;
+border-radius: 10px;
 }
 
 .creator-title {
@@ -110,30 +141,30 @@ footer {
 .emily-info {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
+width: 300px;
+height: 300px;
 }
 
 .lawson-info {
     position: sticky;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
+width: 300px;
+height: 300px;
 }
 
 .tanner-info {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
+width: 300px;
+height: 300px;
 }
 
 .zach-info {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 300px;
+width: 300px;
+height: 300px;
 }
 
 .creator-info {
@@ -292,3 +323,152 @@ input#file-upload-button {
     background-color: black;
     margin: .5rem;
 }
+
+.main-header {
+    font-family: 'DynaPuff', cursive;
+    font-size: 4rem;
+    color: #8F54A0;
+    margin: 1rem;
+}
+
+
+
+
+
+.sideMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: #97C4B8;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sideMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: #F9CEEE;
+	display: block;
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.sideMenu a i {
+	padding-right: 15px;
+}
+.main-menu a:hover {
+	color: #f1f1f1;
+	background: #111;
+}
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+#content-area {
+	transition: margin-left .5s;
+	padding: 16px;
+}
+.content-text {
+	padding: 100px 180px;
+	text-align: center;
+}
+.content-text h2 {
+	background: #97C4B8;
+	display: inline-block;
+	padding: 15px 35px;
+	text-transform: uppercase;
+	font-size: 50px;
+	color: #fff;
+}
+.content-text h3 {
+	text-transform: uppercase;
+	font-size: 45px;
+	margin: 0;
+	letter-spacing: 3px;
+}
+
+
+/* 
+#wrapper {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+
+}
+
+#wrapper .sidebar {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: #97C4B8;
+    /* left: -300px; */
+    
+
+/* 
+#wrapper .sidebar h2 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#wrapper .sidebar ul li {
+    list-style: none;
+    color:rgb(195, 161, 240);
+    font-size: 20px;
+    padding: 20px 24px;
+}
+
+#wrapper .sidebar .toggle-btn {
+    position: absolute;
+    left: 330px;
+    top: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(195, 161, 240);
+}
+
+.toggle-btn span {
+    width: 45px;
+    height: 4px;
+    background: #000;
+    display: block;
+    margin-top: 4px;
+}
+
+#wrapper .sidebar ul li a {
+    color: #fff;
+    display: block;
+    margin: 10px;
+    color:rgb(195, 161, 240)
+}
+
+#wrapper .sidebar ul li a .fas {
+    width: 25px;
+    margin-left: 15px;
+    }
+
+#wrapper .sidebar ul li:hover {
+    background-color: #bdb8d7;
+}
+
+#wrapper .sidebar ul li:hover a{
+    color: #fff;
+
+}   */ */
+
+/* #wrapper .main-content {
+    width: 100%;
+    margin-left: 200px;
+    padding: 20px;
+    position: absolute;
+    height: 100%;

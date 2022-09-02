@@ -6,25 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="https://kit.fontawesome.com/efc842f39c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/global.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,700&display=swap" rel="stylesheet">
+	
     <title>🐾 Ebarkony 🐾
     </title>
 </head>
 <body>
     <header class="page-header">
-        <img class="logo" src="/assets/html_css_js.png">
-        <p class="title"></p>
-        <nav class="nav">
-            <a class="nav-link" id="sign-out-link" href="../auth">Sign Out</a>
-            <a class="nav-link" href="../index.html">Pawfiles</a>
-            <a class="nav-link" href="../pawfile-update/index.html">My Pawfile</a>
-            <a class="nav-link" href="../chat/chat.html">Dog Park</a>
-        </nav>
+        
+        <div class="sideMenu" id="side-menu">
+            <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+            <div class="main-menu">
+                    <a href="../index.html"><i class="fa-solid fa-house"></i>Home</a>
+                    <a href="../pawfile-update/index.html"><i class="fa-solid fa-paw"></i><br>My Pawfile</a>
+                    <a href="../pawfile-users/index.html"><i class="fa-solid fa-paw"></i><br>Dogpark</a>
+                    <a href="../chat/chat.html"><i class="fa-regular fa-comment"></i><br>Chat</a>
+                    <a href="../pawfile-favorites/index.html"><i class="fa-solid fa-paw"></i><br>Dog House</a>
+                    <a href="/creator-page/index.html"><i class="fa-solid fa-people-group"></i><br>Creators</a>
+                    <a href="../auth/index.html"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+    
+            
+            </div>
+        </div>
+        <div id="content-area">
+            <span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ MENU</span>
+        </div>
+        <script>
+        function openNav() {
+        document.getElementById("side-menu").style.width = "300px";
+        document.getElementById("content-area").style.marginLeft = "300px"; 
+        }
+    
+        function closeNav() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("content-area").style.marginLeft= "0";  
+        }
+        </script>
+        
     </header>
     <main class="main-content">
         <h1 class="creator-title">Creator page</h1>
