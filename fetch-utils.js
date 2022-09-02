@@ -38,12 +38,12 @@ export async function signOutUser() {
 }
 
 export async function getAllUsers() {
-    const resp = await client.from('pawfile').select('*');
+    const response = await client.from('pawfile').select('*');
 
-    if (resp.error) {
-        throw new Error(resp.error.message);
+    if (response.error) {
+        throw new Error(response.error.message);
     }
-    return resp.data;
+    return response.data;
 
 }
 
@@ -76,25 +76,25 @@ export async function addMessage(message)
 }
 
 export async function getAllMessages() {
-    const response = await client.from('pawfile_chat').select('*').order('id');
-    let { data: pawfile_chat, error } = await client
+    const response = await client.from('pawfile_chat').select('*').order('created_at');
+    await client
         .from('pawfile_chat')
         .select('*');
 
     return response.data;
 }
-
+//REMOVED A COUPLE THING FROM LINE 80 AND IT FIXED LINT. let { data: pawfile_chat, error }
 export async function getMessageById(user_id) {
-    const resp = await client
+    const response = await client
         .from('pawfile_chat')
         .select('*')
         .match({ user_id })
         .single();
     
-    if (resp.error) {
-        throw new Error(resp.error.message);
+    if (response.error) {
+        throw new Error(response.error.message);
     }
-    return resp.data;
+    return response.data;
 }
 
 export async function uploadImage(bucketName, imageFile, imageName) {
@@ -114,9 +114,51 @@ export async function uploadImage(bucketName, imageFile, imageName) {
     return url;
 }
 
+
+
+export async function getSingleUser(user_id) {
+    const response = await client.from('pawfile').select().match({ user_id }).single();
+    return response.data;
+}
+
 export async function onMessage(handleNewMessage) {
     client 
         .from('pawfile_chat')
         .on('INSERT', handleNewMessage)
+        .subscribe();
+}
+
+export async function deleteMessage(id) {
+    const response = await client
+        .from('pawfile_chat')
+        .delete()
+        .match({ id });
+    
+    return response.data;
+}
+
+export async function getAllDetailComments(target_id) {
+    const response = await client
+        .from('comments')
+        .select('*')
+        .match({ target_id });
+
+    return response.data;        
+}
+
+export async function createDetailComment(comment, target_id) {
+    const response = await client
+        .from('comments')
+        .insert({
+            message: comment, target_id: target_id
+        });
+        
+    return response.data;
+}
+
+export async function onComment(handleNewComment) {
+    client 
+        .from('comments')
+        .on('INSERT', handleNewComment)
         .subscribe();
 }

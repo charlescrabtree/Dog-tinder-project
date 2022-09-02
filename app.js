@@ -10,27 +10,6 @@ const signOutLink = document.getElementById('sign-out-link');
 
 
 
-
-
-
-
-
-
-
-
-
-// async function displayAllUsers() {
-//     const users = await getAllUsers();
-
-//     for (let user of users) {
-//         const userDiv = renderAllUsers(user);
-//         userContainerEl.append(userDiv);
-//     }
-
-// }
-
-
-
 // async function loadPawfile() {
 //     const pawfile = await getUserById(user.id);
 //     if (pawfile && pawfile.image_url) {
@@ -40,5 +19,6 @@ const signOutLink = document.getElementById('sign-out-link');
 //     }
 // }
 
-// displayAllUsers();
-// loadPawfile();
+
+
+

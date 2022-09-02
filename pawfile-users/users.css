@@ -61,7 +61,6 @@ border-radius: 15px;
     flex-direction: column;
     display: flex;
     text-align: center;
-    justify-content: space-around;
     border: 1px solid black;
     width: 350px;
     height: 350px;

@@ -1,4 +1,4 @@
-import { checkAuth, addMessage, getAllMessages, getUserById, signOutUser, onMessage } from '../fetch-utils.js';
+import { checkAuth, addMessage, getAllMessages, getUserById, signOutUser, onMessage, } from '../fetch-utils.js';
 import { renderMessage } from '../render-function.js';
 
 const chatFormEl = document.getElementById('chat-form');
@@ -21,9 +21,8 @@ async function displayComments() {
 
 async function displayMessage(message) {
     const userId = await getUserById(message.pawfile_id);
-    const renderChat = renderMessage(message, userId, currentUser);
+    const renderChat = renderMessage(message.message, userId, currentUser);
     chatContainerEl.append(renderChat);
-
     renderChat.scrollIntoView({
         behavior: 'smooth'
     });
