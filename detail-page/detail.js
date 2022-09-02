@@ -1,5 +1,5 @@
 import { renderSingleUser, renderMessage } from '../render-function.js';
-import { getSingleUser, checkAuth, getUserById, createDetailComment, getAllDetailComments } from '../fetch-utils.js';
+import { getSingleUser, checkAuth, getUserById, createDetailComment, getAllDetailComments, onComment } from '../fetch-utils.js';
 
 
 
@@ -32,12 +32,12 @@ chatFormEl.addEventListener('submit', async (e) => {
 
 
 async function displayDetailComments() {
+    chatContainerEl.textContent = '';
     const params = new URLSearchParams(window.location.search);
     const id = params.get('user_id');
     const comments = await getAllDetailComments(id);
     for (let comment of comments) {
         const commenterUser = await getUserById(comment.comment_by_id);
-        console.log(comment.message);
         const renderChat = renderMessage(comment.message, commenterUser, currentUser);
         chatContainerEl.append(renderChat);
         renderChat.scrollIntoView({
@@ -46,4 +46,24 @@ async function displayDetailComments() {
     }
 }
 
+
+async function displayDetailComment(comment) {
+    const commenterUser = await getUserById(comment.comment_by_id);
+    const renderChat = renderMessage(comment.message, commenterUser, currentUser);
+    chatContainerEl.append(renderChat);
+    renderChat.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+
+
+
+
 displayDetailComments();
+
+onComment((payload) => {
+    
+    displayDetailComment(payload.new);
+});
+

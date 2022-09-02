@@ -155,3 +155,10 @@ export async function createDetailComment(comment, target_id) {
         
     return response.data;
 }
+
+export async function onComment(handleNewComment) {
+    client 
+        .from('comments')
+        .on('INSERT', handleNewComment)
+        .subscribe();
+}

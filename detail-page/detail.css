@@ -149,3 +149,23 @@ form button {
 .commentP {
     font-size: 1rem;
 }
+
+.chat-list {
+        scrollbar-width: auto;
+    scrollbar-color: #8f54a0 #ffffff;
+
+}
+
+.avatar-class {
+       border-radius: 15px;
+    max-width: 200px;
+    max-height: 200px;
+    box-shadow: -6px 5px 15px 5px rgb(0 0 0 / 75%);
+}
+
+.your-message{
+    flex-direction: row-reverse;
+    align-self: end;
+    background-color: lightblue;
+    justify-content: space-between;
+}

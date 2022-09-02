@@ -44,8 +44,8 @@ export function renderMessage(comment, user, currentUser) {
 
     const commentP = document.createElement('p');
     commentP.classList.add('commentP');
-    if (comment.message) {
-        commentP.innerHTML = comment.message.replace(/(http|https|ftp):\/\/(\S*)/g, match => `<a target = "_blank" href = "${match}">${match}</a> `);
+    if (comment) {
+        commentP.innerHTML = comment.replace(/(http|https|ftp):\/\/(\S*)/g, match => `<a target = "_blank" href = "${match}">${match}</a> `);
     }
     userContainer.append(avatarEl, dogNameEl);
 
