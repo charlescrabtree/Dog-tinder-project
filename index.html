@@ -1,36 +1,77 @@
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/x-icon" href="./assets/dog_chat_placeholder.png" />
-
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/users.css" />
-
-    <title>🐾 Ebarkony 🐾</title>
-</head>
-<body>
-    <header class="page-header">
-        <nav class="navs">
-            <a class="nav-links" id="sign-out-link" href="./auth">Sign out</a>
-            <a class="nav-links" href="./pawfile-update/index.html">My Pawfile</a>
-            <a class="nav-links" href="./creator-page/index.html">Creator Page</a>
-            <a class="nav-links" href="./chat/chat.html">Dog Park</a>
-        </nav>
-    </header>
-    <main id="all-users">
-        <div id="users-container" class="all-users-container">
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="icon" type="image/x-icon" href="./assets/dog_chat_placeholder.png" />
+    
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script src="https://kit.fontawesome.com/efc842f39c.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,700&display=swap" rel="stylesheet">
+        
+    
+        <title>🐾 Ebarkony 🐾</title>
+    </head>
+    
+    <body>
+        <div class="sideMenu" id="side-menu">
+            <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+            <div class="main-menu">
+                    <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+                    <a href="../pawfile-update/index.html"><i class="fa-solid fa-paw"></i><br>My Pawfile</a>
+                    <a href="../pawfile-users/index.html"><i class="fa-solid fa-dog"></i><br>Pawfiles</a>
+                    <a href="../pawfile-chat/index.html"><i class="fa-solid fa-comment"></i><br>Dogpark</a>
+                    <a href="../creator-page/index.html"><i class="fa-solid fa-people-group"></i><br>Creators</a>
+                    <a href="../auth" id="sign-out-link"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+            </div>
         </div>
-    </main>
-    <script type="module" src="app.js"></script>\
-</body>
+        <div id="content-area">
+            <span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ MENU</span>
+            <div class="content-text">
+                <h2>Welcome to Barkle!</h2>
+                <br>
+                <br>
+                <br>
+                <h3>Here is a guide on how Barkle works:</h3>
+                <br>
+                <br>
+                <br>
+                <p>Welcome to Barkle! Thank you for joining us on the #1 platform for puppers 
+                    to make new friends! We encourage everyone to take a look around and search
+                    through the mass amount of users to see who fits your puppers the best!
+                    By using the sidebar navigation, users can easily toggle between the different
+                    pages of Barkle. The home page is where users can find a brief description of
+                    Barkle and how it works. The pawfile page is where users can update their   
+                    information and add a profile picture. The dogpark page is where users can
+                    search through all the users of Barkle and find the perfect match for their
+                    puppers. The chat page is where users can chat with other users and make new
+                    friends. The doghouse page is where users can save their favorite users and
+                    keep track of them. The creators page is where users can find information
+                    about the creators of Barkle. We wish you a merry time on Barkle and hope
+                    you find the perfect match for your puppers!
+                </p>
+            </div>
+        </div>
+        <script>
+        function openNav() {
+        document.getElementById("side-menu").style.width = "300px";
+        document.getElementById("content-area").style.marginLeft = "300px"; 
+        }
+    
+        function closeNav() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("content-area").style.marginLeft= "0";  
+        }
+        </script>
+        <script type="module" src="app.js"></script>
+    </body>
+        
+        
 </html>

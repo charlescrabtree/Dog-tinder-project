@@ -7,12 +7,7 @@ header {
     display: flex;
 }
 
-nav {
-    flex-grow: 2;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
+
 
 body {
     height: 100vh;
@@ -26,7 +21,6 @@ body {
 }
 
 .users-container {
-
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
@@ -70,7 +64,6 @@ border-radius: 15px;
     -moz-box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
     background: rgb(238,174,202);
     background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    
 }
 
 .page-header {
@@ -83,4 +76,72 @@ border-radius: 15px;
 .name-tag {
     font-size: 2rem;
     text-decoration: none;
+}
+
+.sideMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: #97C4B8;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sideMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: #F9CEEE;
+	display: block;
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.sideMenu a i {
+	padding-right: 15px;
+}
+.main-menu a:hover {
+	color: #f1f1f1;
+	background: #111;
+}
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+#content-area {
+	transition: margin-left .5s;
+	
+}
+.content-text {
+	padding: 30px;
+	text-align: center;
+}
+.content-text h2 {
+	background: #97C4B8;
+	display: inline-block;
+	padding: 15px 35px;
+	text-transform: uppercase;
+	font-size: 50px;
+	color: #fff;
+}
+.content-text h3 {
+	text-transform: uppercase;
+	font-size: 45px;
+	margin: 0;
+	letter-spacing: 3px;
+}
+
+.pawfiles {
+    color: #97C4B8;
+    align-items: center;
+    font-size: 4rem;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 }

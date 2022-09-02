@@ -1,5 +1,5 @@
-import { renderSingleUser, renderMessage } from '../render-function.js';
-import { getSingleUser, checkAuth, getUserById, createDetailComment, getAllDetailComments, onComment } from '../fetch-utils.js';
+import { renderSingleUser, renderMessage } from '../../render-function.js';
+import { getSingleUser, checkAuth, getUserById, createDetailComment, getAllDetailComments, onComment } from '../../fetch-utils.js';
 
 
 
