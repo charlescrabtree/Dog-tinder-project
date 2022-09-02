@@ -14,13 +14,12 @@
 <body>
 
     <div class="sideMenu" id="side-menu">
-		<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+		<a class="closebtn" onclick="closeNav()">×</a>
 		<div class="main-menu">
                 <a href="../index.html"><i class="fa-solid fa-house"></i>Home</a>
                 <a href="../pawfile-update/index.html"><i class="fa-solid fa-paw"></i><br>My Pawfile</a>
                 <a href="../pawfile-users/index.html"><i class="fa-solid fa-dog"></i><br>Dogpark</a>
                 <a href="./chat.html"><i class="fa-regular fa-comment"></i><br>Chat</a>
-                <a href="./pawfile-favorites/index.html"><i class="fa-solid fa-bone"></i><br>Dog House</a>
                 <a href="../creator-page/index.html"><i class="fa-solid fa-people-group"></i><br>Creators</a>
                 <a href=./auth"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
 
@@ -31,17 +30,7 @@
 		<span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ MENU</span>
 		
 	</div>
-	<script>
-	function openNav() {
-	document.getElementById("side-menu").style.width = "300px";
-	document.getElementById("content-area").style.marginLeft = "300px"; 
-	}
-
-	function closeNav() {
-	document.getElementById("side-menu").style.width = "0";
-	document.getElementById("content-area").style.marginLeft= "0";  
-	}
-	</script>
+	
 
 
         <section class="chat-container">
@@ -54,5 +43,16 @@
         </form>
     </div>
 </body>
+<script>
+	function openNav() {
+	document.getElementById("side-menu").style.width = "300px";
+	document.getElementById("content-area").style.marginLeft = "300px"; 
+	}
+
+	function closeNav() {
+	document.getElementById("side-menu").style.width = "0";
+	document.getElementById("content-area").style.marginLeft= "0";  
+	}
+	</script>
 <script type="module" src="chat.js"></script>
 </html>

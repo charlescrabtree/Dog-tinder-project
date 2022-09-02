@@ -34,7 +34,7 @@
                 <a class="nav-link" href="../chat/chat.html">Dog Park</a>
             </nav>
         </header>
-     
+    
 
         <section id="user-detail" class="user-detail">
 
@@ -50,9 +50,20 @@
     <button class="chat-button">Send message</button>
 </form>
 
-   
+
     </main>
     <script type="module" src="detail.js"></script>
+    <script>
+        function openNav() {
+        document.getElementById("side-menu").style.width = "300px";
+        document.getElementById("content-area").style.marginLeft = "300px"; 
+        }
+    
+        function closeNav() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("content-area").style.marginLeft= "0";  
+        }
+        </script>
 </body>
 
 </html>
