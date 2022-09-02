@@ -1,5 +1,5 @@
-import { checkAuth, signOutUser, getUserById, getAllUsers, } from './fetch-utils.js.js';
-import { renderAllUsers } from './render-function.js.js';
+import { checkAuth, signOutUser, getUserById, getAllUsers, } from './fetch-utils.js.';
+import { renderAllUsers } from './render-function.js.';
 
 checkAuth();
 const user = checkAuth();

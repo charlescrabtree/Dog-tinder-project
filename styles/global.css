@@ -417,8 +417,8 @@ input#file-upload-button {
     background: #97C4B8;
     /* left: -300px; */
     
-}
 
+/* 
 #wrapper .sidebar h2 {
     color: #fff;
     text-transform: uppercase;
@@ -469,7 +469,7 @@ input#file-upload-button {
 #wrapper .sidebar ul li:hover a{
     color: #fff;
 
-}   */
+}   */ */
 
 /* #wrapper .main-content {
     width: 100%;
@@ -477,4 +477,3 @@ input#file-upload-button {
     padding: 20px;
     position: absolute;
     height: 100%;
-}

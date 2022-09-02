@@ -1,10 +1,10 @@
 import { checkAuth, signOutUser, } from './fetch-utils.js';
 // import { renderAllUsers } from './render-function.js';
 
+
+
+
 checkAuth();
-
-
-
 
 const signOutLink = document.getElementById('sign-out-link');
 
