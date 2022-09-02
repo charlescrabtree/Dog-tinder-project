@@ -1,5 +1,5 @@
 import { checkAuth, signOutUser, getAllUsers, } from './fetch-utils.js';
-import { renderAllUsers } from './render-function.js';
+import { renderAllUsers, } from './render-function.js';
 
 const signOutLink = document.getElementById('sign-out-link');
 const userContainerEl = document.getElementById('users-container');
@@ -15,5 +15,9 @@ async function displayAllUsers() {
         userContainerEl.append(userDiv);
     }
 }
+
+
+
+
 
 displayAllUsers();

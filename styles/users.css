@@ -62,7 +62,6 @@ border-radius: 15px;
     flex-direction: column;
     display: flex;
     text-align: center;
-    justify-content: space-around;
     border: 1px solid black;
     width: 350px;
     height: 350px;
@@ -71,6 +70,7 @@ border-radius: 15px;
     -moz-box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
     background: rgb(238,174,202);
     background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    
 }
 
 .page-header {
@@ -82,4 +82,5 @@ border-radius: 15px;
 
 .name-tag {
     font-size: 2rem;
+    text-decoration: none;
 }

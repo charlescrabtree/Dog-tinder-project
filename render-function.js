@@ -1,7 +1,11 @@
 export function renderAllUsers(user) {
+    const a = document.createElement('a');
+    a.href = `./detail-page/?user_id=${user.user_id}`;
+
     const userEl = document.createElement('div');
     userEl.classList.add('user-div');
     
+
 
     const nameEl = document.createElement('p');
     nameEl.classList.add('name-tag');
@@ -11,13 +15,12 @@ export function renderAllUsers(user) {
     imgEl.classList.add('img-tag');
     imgEl.src = user.image_url;
 
-    const bioEl = document.createElement('p');
-    bioEl.classList.add('bio-tag');
-    bioEl.textContent = user.bio;
+    
+    userEl.append(nameEl, imgEl);
 
-    userEl.append(nameEl, imgEl, bioEl);
+    a.append(userEl);
 
-    return userEl;
+    return a;
 }
 
 export function renderMessage(comment, user, currentUser) {
@@ -41,12 +44,37 @@ export function renderMessage(comment, user, currentUser) {
 
     const commentP = document.createElement('p');
     commentP.classList.add('commentP');
-    console.log(comment.message.replace(/(http|https|ftp):\/\/(\S*)/g, match => `<a target = "_blank" href = "${match}">${match}</a> `));
-    commentP.innerHTML = comment.message.replace(/(http|https|ftp):\/\/(\S*)/g, match => `<a target = "_blank" href = "${match}">${match}</a> `);
-    
+    if (comment) {
+        commentP.innerHTML = comment.replace(/(http|https|ftp):\/\/(\S*)/g, match => `<a target = "_blank" href = "${match}">${match}</a> `);
+    }
     userContainer.append(avatarEl, dogNameEl);
 
     dogChat.append(userContainer, commentP);
 
     return dogChat;
 }
+
+
+export function renderSingleUser(user) {
+    const userEl = document.createElement('div');
+    userEl.classList.add('user-div');
+    
+
+    const nameEl = document.createElement('p');
+    nameEl.classList.add('name-tag');
+    nameEl.textContent = user.name;
+
+    const imgEl = document.createElement('img');
+    imgEl.classList.add('img-tag');
+    imgEl.src = user.image_url;
+
+    const bioEl = document.createElement('p');
+    bioEl.classList.add('bio-tag');
+    bioEl.textContent = user.bio;
+
+    userEl.append(nameEl, imgEl, bioEl);
+
+    return userEl;
+}
+
+
