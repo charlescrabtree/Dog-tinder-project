@@ -5,7 +5,7 @@ const nameEl = document.getElementById('pawfile-name');
 const bioEl = document.getElementById('pawfile-bio');
 const buttonEl = document.getElementById('add-pawfile');
 const avatarEl = document.getElementById('avatar');
-
+const avatarPreviewEl = document.getElementById('pawfile-image');
 const signOutLink = document.getElementById('sign-out-link');
 const user = checkAuth();
 
