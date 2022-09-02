@@ -8,6 +8,7 @@ checkAuth();
 
 const signOutLink = document.getElementById('sign-out-link');
 
+signOutLink.addEventListener('click', signOutUser);
 
 
 // async function loadPawfile() {
