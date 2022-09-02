@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Roboto&family=The+Nautigal:wght@700&display=swap');
+
+
+:root {
+    --background: rgb(195, 161, 240);
+    --header-background: white;
+    --footer-background: rgb(243, 242, 242);
+    --text-color: rgb(7, 5, 68);
+    --label-color: rgb(75, 102, 98);
+    --placeholder-color: rgb(136, 136, 153);
+    --offset-color: rgb(217, 236, 217);
+    --action-color: rgb(77, 132, 252);
+}
+
+body {
+    height: 200px;
+    font-family: 'Rubik', san-serif;
+    background: rgb(238,174,202);
+    background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+.entire-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/pet-background.png');
+}
+
+
+.entire-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/pet-background.png');
+    overflow-x: hidden;
+}
+
+header.page-header{
+
+}
+.page-header .title {
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.img-tag {
+    border-radius: 15px;
+    height: 100px;
+    width: 100px;
+    box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 0 1rem;
+}
+
+.bio-tag {
+    font-family: 'DynaPuff', cursive;
+    width: 500px;
+    font-size: 1.5rem
+}
+
+.name-tag {
+    font-family: 'DynaPuff', cursive;
+    font-size: 3rem
+}
+
+.chat-form {
+    width: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10rem;
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 1rem;
+    background-color: #F9CEEE;
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+}
+
+
+.user-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-container {
+    width: 50%;
+    display: flex;
+    margin: 3px;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 15px;
+}
+.user-container {
+    background-color: #4444441e;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+}
+.commentP {
+    font-size: 1rem;
+}
+
+.chat-list {
+    scrollbar-width: auto;
+    scrollbar-color: #8f54a0 #ffffff;
+
+}
+
+.avatar-class {
+    border-radius: 100%;
+    max-width: 70px;
+    max-height: 70px;
+    box-shadow: -6px 5px 15px 5px rgb(0 0 0 / 75%);
+}
+
+.your-message{
+    flex-direction: row-reverse;
+    align-self: end;
+    background-color: lightblue;
+    justify-content: space-between;
+}
+
+.chat-container {
+    background-color: #F9CEEE;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:left;
+    height: 60%;
+    width: 60%;
+    border: 3px solid white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
+    scrollbar-width: auto;
+    scrollbar-color: #8f54a0 #ffffff;
+}
+  *::-webkit-scrollbar {
+    width: 17px;
+}
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #8f54a0;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+
+.chat-input{
+    padding: 6px;
+    font-size: 16px;
+    border-width: 2px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.88);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    margin: 20px;
+    font-family: 'DynaPuff', cursive;
+}
+
+.chat-button {
+background: #f9ceee;
+background-image: -webkit-linear-gradient(top, #f9ceee, #CCF3EE);
+background-image: -moz-linear-gradient(top, #f9ceee, #CCF3EE);
+background-image: -ms-linear-gradient(top, #f9ceee, #CCF3EE);
+background-image: -o-linear-gradient(top, #f9ceee, #CCF3EE);
+background-image: linear-gradient(to bottom, #f9ceee, #CCF3EE);
+-webkit-border-radius: 28;
+-moz-border-radius: 28;
+border-radius: 28px;
+-webkit-box-shadow: 1px 3px 8px #0f0f0f;
+-moz-box-shadow: 1px 3px 8px #0f0f0f;
+box-shadow: 1px 3px 8px #0f0f0f;
+font-family: Arial;
+color: black;
+font-size: 26px;
+padding: 10px;
+text-decoration: none;
+font-family: 'DynaPuff', cursive;
+transition: all 0.5s ease;
+}
+
+.name-container{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.bio-tag {
+    text-align: center;
+    display: -webkit-box;
+    width: 40rem;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sideMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: #97C4B8;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sideMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: #F9CEEE;
+	display: block;
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.sideMenu a i {
+	padding-right: 15px;
+}
+.main-menu a:hover {
+	color: #f1f1f1;
+	background: #111;
+}
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.content-text {
+	padding: 100px 180px;
+	text-align: center;
+}
+.content-text h2 {
+	background: #97C4B8;
+	display: inline-block;
+	padding: 15px 35px;
+	text-transform: uppercase;
+	font-size: 50px;
+	color: #fff;
+}
+.content-text h3 {
+	text-transform: uppercase;
+	font-size: 45px;
+	margin: 0;
+	letter-spacing: 3px;
+}

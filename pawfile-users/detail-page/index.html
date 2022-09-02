@@ -16,26 +16,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="detail.css">
-
+    <script src="https://kit.fontawesome.com/efc842f39c.js" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,700&display=swap" rel="stylesheet">
     <title>🐾 Barkle 🐾</title>
-
 </head>
 
 <body>
-    <main class="entire-page">
+    
         <header class="page-header">
             <img class="logo" src="">
             <div>
-                <p class="title">Ebarkony</p>
+                <p class="title">Barkle</p>
             </div>
-            <nav class="nav">
-                <a class="nav-link" id="sign-out-link" href="../auth">Sign out</a>
-                <a class="nav-link" href="../index.html">Pawfiles</a>
-                <a class="nav-link" href="../creator-page/index.html">Creator Page</a>
-                <a class="nav-link" href="../chat/chat.html">Dog Park</a>
-            </nav>
+            <div class="sideMenu" id="side-menu">
+                <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+                <div class="main-menu">
+                    <a href="/pawfile-users/index.html"><i class="fa-solid fa-paw"></i><br>Pawfiles</a>
+                </div>
+            </div>
+        <span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ MENU</span>
+        
         </header>
-
+    
+        <main class="entire-page">
+        
         <section id="user-detail" class="user-detail">
 
         </section>
@@ -50,7 +55,19 @@
     <button class="chat-button">Send message</button>
 </form>
 
+
     </main>
+    <script>
+        function openNav() {
+        document.getElementById("side-menu").style.width = "300px";
+        document.getElementById("content-area").style.marginLeft = "300px"; 
+        }
+    
+        function closeNav() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("content-area").style.marginLeft= "0";  
+        }
+        </script>
     <script type="module" src="detail.js"></script>
 </body>
 

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" type="image/x-icon" href="../assets/default-dog-image.png" />
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="https://kit.fontawesome.com/efc842f39c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -16,24 +17,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="pawfile.css" /> 
-
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,700&display=swap" rel="stylesheet">
     <title>🐾 Barkle 🐾</title>
-
 </head>
 <body>
     <main class="entire-page"> 
     <header class="page-header">
         <img class="logo" src="">
-        <div><p class="title">Barkle</p></div>
-        <nav class="nav">
-            <a class="nav-link" id="sign-out-link" href="../auth">Sign out</a>
-            <a class="nav-link" href="../index.html">Pawfiles</a>
-            <a class="nav-link" href="../creator-page/index.html">Creator Page</a>
-            <a class="nav-link" href="../chat/chat.html">Dog Park</a>
-        </nav>
+        <div class="sideMenu" id="side-menu">
+            <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+            <div class="main-menu">
+                    <a href="../index.html"><i class="fa-solid fa-house"></i>Home</a>
+                    <a href="/pawfile-update/index.html"><i class="fa-solid fa-paw"></i><br>My Pawfile</a>
+                    <a href="../pawfile-users/index.html"><i class="fa-solid fa-dog"></i><br>Pawfiles</a>
+                    <a href="../pawfile-chat/index.html"><i class="fa-solid fa-comment"></i><br>Dogpark</a>
+                    <a href="../creator-page/index.html"><i class="fa-solid fa-people-group"></i><br>Creators</a>
+                    <a href="../auth" id="sign-out-link"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
+            </div>
+        </div>
+        <div id="content-area">
+            <span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ MENU</span>
+            <div class="content-text"> <h1 class="web-title">🐾 Welcome to Barkle! 🐾
+            </h1>
+            </div>
     </header>
-        <h1 class="web-title">🐾 Welcome to Barkle! 🐾
-        </h1>
+    
         <form id="pawfile-form">
             <section>
             <h3>Pawfile Name</h3>
@@ -56,6 +65,17 @@
             <button id="add-pawfile" class="update-pawfile"> Update Pawfile </button>
         </form>
     </main>
-    <script type="module" src="pawfile.js"></script>
+    <script>
+        function openNav() {
+        document.getElementById("side-menu").style.width = "300px";
+        document.getElementById("content-area").style.marginLeft = "300px"; 
+        }
+    
+        function closeNav() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("content-area").style.marginLeft= "0";  
+        }
+        </script>
 </body>
+<script type="module" src="pawfile.js"></script>
 </html>

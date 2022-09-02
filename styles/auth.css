@@ -6,9 +6,10 @@
   margin-bottom: 50px;
   font-family: 'Titillium Web';
   font-size: 80px;
-    color: #FEC8D8;
+    color: #97C4B8;
     text-align: center;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #957DAD, 0 0 20px #957DAD, 0 0 25px #957DAD, 0 0 30px #957DAD, 0 0 35px #957DAD;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    
 }
 
 .signup-body {
@@ -20,18 +21,18 @@
   grid-template-columns: 1fr;
   gap: 20px;
   padding: 20px;
-  color: #FEC8D8; 
-  background-color: #957DAD;
+  color: #F9F3EE; 
+  background-color: #97C4B8;
   border-radius: 15px;
 }
 
 .signin-button {
   margin-top: 10px;
   height: 45px;
-  background: #FEC8D8;
+  background: #F9F3EE;
   border: 0;
   font-weight: bold;
-  color: #957DAD;
+  color: #97C4B8;
 }
 
 .switch {
