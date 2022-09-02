@@ -15,22 +15,12 @@
 body {
     height: 200px;
     font-family: 'Rubik', san-serif;
-    background: rgb(238,174,202);
-    background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-image: url('../../assets/pet-background.png');
+    /* background: rgb(238,174,202); */
+    /* background: linear-gradient(61deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
-
-
-
-.entire-page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    background-image: url('../assets/pet-background.png');
-}
-
 
 .entire-page {
     align-items: center;
@@ -39,7 +29,6 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 80vw;
-    background-image: url('../assets/pet-background.png');
     overflow-x: hidden;
 }
 
