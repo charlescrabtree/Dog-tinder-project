@@ -38,7 +38,9 @@ export async function signOutUser() {
 }
 
 export async function getAllUsers() {
-    const response = await client.from('pawfile').select('*');
+    const response = await client
+        .from('pawfile')
+        .select('*');
 
     if (response.error) {
         throw new Error(response.error.message);
@@ -67,8 +69,7 @@ export async function savePawfile(user_id) {
         .upsert(user_id);
 }
 
-export async function addMessage(message) 
-{
+export async function addMessage(message) {
     return await client
         .from('pawfile_chat')
         .insert(message)
@@ -76,14 +77,14 @@ export async function addMessage(message)
 }
 
 export async function getAllMessages() {
-    const response = await client.from('pawfile_chat').select('*').order('created_at');
-    await client
+    const response = await client
         .from('pawfile_chat')
-        .select('*');
+        .select('*')
+        .order('created_at');
 
     return response.data;
 }
-//REMOVED A COUPLE THING FROM LINE 80 AND IT FIXED LINT. let { data: pawfile_chat, error }
+
 export async function getMessageById(user_id) {
     const response = await client
         .from('pawfile_chat')
@@ -97,7 +98,7 @@ export async function getMessageById(user_id) {
     return response.data;
 }
 
-export async function uploadImage(bucketName, imageFile, imageName) {
+export async function uploadImage(imageFile, imageName) {
     const response = await client.storage
         .from('profile-images')
         .upload(imageName, imageFile, {
@@ -107,6 +108,7 @@ export async function uploadImage(bucketName, imageFile, imageName) {
 
     if (response.error) {
         console.log(response.error);
+
         return null;
     }
     const url = `${SUPABASE_URL}/storage/v1/object/public/${response.data.Key}`;
@@ -114,15 +116,18 @@ export async function uploadImage(bucketName, imageFile, imageName) {
     return url;
 }
 
-
-
 export async function getSingleUser(user_id) {
-    const response = await client.from('pawfile').select().match({ user_id }).single();
+    const response = await client
+        .from('pawfile')
+        .select()
+        .match({ user_id })
+        .single();
+
     return response.data;
 }
 
 export async function onMessage(handleNewMessage) {
-    client 
+    await client 
         .from('pawfile_chat')
         .on('INSERT', handleNewMessage)
         .subscribe();
@@ -150,14 +155,15 @@ export async function createDetailComment(comment, target_id) {
     const response = await client
         .from('comments')
         .insert({
-            message: comment, target_id: target_id
+            message: comment, 
+            target_id: target_id
         });
         
     return response.data;
 }
 
 export async function onComment(handleNewComment) {
-    client 
+    await client 
         .from('comments')
         .on('INSERT', handleNewComment)
         .subscribe();

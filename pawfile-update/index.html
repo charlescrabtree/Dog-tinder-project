@@ -5,58 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/default-dog-image.png" />
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/efc842f39c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="pawfile.css" />
-    
+    <link rel="stylesheet" href="pawfile.css" /> 
 
-    
-    <title>🐾 Ebarkony 🐾</title>
+    <title>🐾 Barkle 🐾</title>
+
 </head>
 <body>
     <main class="entire-page"> 
     <header class="page-header">
         <img class="logo" src="">
-        <div class="sideMenu" id="side-menu">
-            <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
-            <div class="main-menu">
-                    
-                    <a href="../index.html"><i class="fa-solid fa-house"></i>Home</a>
-                    <a href="../pawfile-update/index.html"><i class="fa-solid fa-paw"></i><br>My Pawfile</a>
-                    <a href="../pawfile-users/index.html"><i class="fa-solid fa-dog"></i><br>Pawfile</a>
-                    <a href="../chat/chat.html"><i class="fa-regular fa-comment"></i><br>Dogpark</a>
-                    <a href="./pawfile-favorites/index.html"><i class="fa-solid fa-bone"></i><br>Dog House</a>
-                    <a href="../creator-page/index.html"><i class="fa-solid fa-people-group"></i><br>Creators</a>
-                    <a href=./auth"><i class="fa-solid fa-right-from-bracket"></i>Sign Out</a>
-            </div>
-        </div>
-        <div id="content-area">
-            <span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ MENU</span>
-        
-        </div>
-        <script>
-        function openNav() {
-        document.getElementById("side-menu").style.width = "300px";
-        document.getElementById("content-area").style.marginLeft = "300px"; 
-        }
-    
-        function closeNav() {
-        document.getElementById("side-menu").style.width = "0";
-        document.getElementById("content-area").style.marginLeft= "0";  
-        }
-        </script>
+        <div><p class="title">Barkle</p></div>
+        <nav class="nav">
+            <a class="nav-link" id="sign-out-link" href="../auth">Sign out</a>
+            <a class="nav-link" href="../index.html">Pawfiles</a>
+            <a class="nav-link" href="../creator-page/index.html">Creator Page</a>
+            <a class="nav-link" href="../chat/chat.html">Dog Park</a>
+        </nav>
     </header>
-        <h1 class="web-title">🐾 Welcome to Ebarkony! 🐾
+        <h1 class="web-title">🐾 Welcome to Barkle! 🐾
         </h1>
         <form id="pawfile-form">
             <section>
@@ -65,7 +41,7 @@
             </section>
             <section id="pawfile-img-container">
                 <h3>Pawfile Avatar</h3>
-                <img src="../assets/default-dog-image.png" class="default-avatar" id="avatar" alt="preview-dog-picture">
+                <img src="https://cdn.dribbble.com/users/60266/screenshots/3778143/media/e5029c9495f315e9ec3c831bf0a4073b.png?compress=1&resize=400x300" class="default-avatar" id="avatar" alt="preview-dog-picture">
                 <input type="file" name="pawfile-image" id="pawfile-image" class="pawfile-avatar">
             </section>
             <label class="pawfile-bio">

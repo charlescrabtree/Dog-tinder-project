@@ -24,11 +24,13 @@ body {
 
 
 .entire-page {
+    align-items: center;
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     background-image: url('../assets/pet-background.png');
+    overflow-x: hidden;
 }
 
 
@@ -38,28 +40,6 @@ body {
 }
 
 
-form {
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid;
-    background: var(--footer-background);
-    padding: 20px;
-    border-radius: 10px;
-
-    display: grid;
-    
-}
-form input,
-form textarea,
-form select,
-form button {
-    width: 100%;
-    font-size: 1em;
-    padding: 7px;
-    border-radius:8px;
-    
-
-}
 
 
 .nav {
@@ -82,18 +62,19 @@ form button {
     color: #8F54A0;
 }
 
-
 .img-tag {
     border-radius: 15px;
-    max-width: 300px;
-    max-height: 300px;
+    height: 100px;
+    width: 100px;
     box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 0 1rem;
 }
 
 .bio-tag {
     font-family: 'DynaPuff', cursive;
     width: 500px;
-    height: 200px;
     font-size: 1.5rem
 }
 
@@ -104,9 +85,11 @@ form button {
 
 .chat-form {
     width: 50%;
+    height: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 10rem;
 }
 
 .chat-list {
@@ -116,16 +99,11 @@ form button {
     list-style: none;
     padding: 0;
     margin: 1rem;
-
     background-color: #F9CEEE;
-    width: 50vw;
+    width: 100%;
     border-radius: 15px;
-    box-shadow: -6px 5px 15px 5px rgba(0,0,0,0.75);
+    height: 100%;
 }
-.user-div {
-    width: 50%;
-}
-
 
 .div-container {
     width: 50%;
@@ -151,13 +129,16 @@ form button {
 }
 
 .chat-list {
-        scrollbar-width: auto;
+    scrollbar-width: auto;
     scrollbar-color: #8f54a0 #ffffff;
 
 }
 
 .avatar-class {
-       border-radius: 15px;
+    border-radius: 100%;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 15px;
     max-width: 200px;
     max-height: 200px;
     box-shadow: -6px 5px 15px 5px rgb(0 0 0 / 75%);
@@ -168,4 +149,89 @@ form button {
     align-self: end;
     background-color: lightblue;
     justify-content: space-between;
+}
+
+.chat-container {
+    background-color: #F9CEEE;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:left;
+    height: 60%;
+    width: 60%;
+    border: 3px solid white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
+    scrollbar-width: auto;
+    scrollbar-color: #8f54a0 #ffffff;
+}
+  *::-webkit-scrollbar {
+    width: 17px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #8f54a0;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  
+.chat-input{
+    padding: 6px;
+    font-size: 16px;
+    border-width: 2px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.88);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    margin: 20px;
+    font-family: 'DynaPuff', cursive;
+}
+
+.chat-button {
+  background: #f9ceee;
+  background-image: -webkit-linear-gradient(top, #f9ceee, #CCF3EE);
+  background-image: -moz-linear-gradient(top, #f9ceee, #CCF3EE);
+  background-image: -ms-linear-gradient(top, #f9ceee, #CCF3EE);
+  background-image: -o-linear-gradient(top, #f9ceee, #CCF3EE);
+  background-image: linear-gradient(to bottom, #f9ceee, #CCF3EE);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 1px 3px 8px #0f0f0f;
+  -moz-box-shadow: 1px 3px 8px #0f0f0f;
+  box-shadow: 1px 3px 8px #0f0f0f;
+  font-family: Arial;
+  color: black;
+  font-size: 26px;
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'DynaPuff', cursive;
+  transition: all 0.5s ease;
+}
+
+.name-container{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.user-detail {
+    margin-top: 5.5rem;
+}
+
+.bio-tag {
+    text-align: center;
+    display: -webkit-box;
+    width: 40rem;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

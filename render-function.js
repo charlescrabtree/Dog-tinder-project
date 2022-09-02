@@ -1,12 +1,11 @@
 export function renderAllUsers(user) {
     const a = document.createElement('a');
     a.href = `./detail-page/?user_id=${user.user_id}`;
+    a.classList.add('text-decoration');
 
     const userEl = document.createElement('div');
     userEl.classList.add('user-div');
     
-
-
     const nameEl = document.createElement('p');
     nameEl.classList.add('name-tag');
     nameEl.textContent = user.name;
@@ -15,7 +14,6 @@ export function renderAllUsers(user) {
     imgEl.classList.add('img-tag');
     imgEl.src = user.image_url;
 
-    
     userEl.append(nameEl, imgEl);
 
     a.append(userEl);
@@ -59,6 +57,9 @@ export function renderSingleUser(user) {
     const userEl = document.createElement('div');
     userEl.classList.add('user-div');
     
+    const nameContainer = document.createElement('div');
+    nameContainer.classList.add('name-container');
+
 
     const nameEl = document.createElement('p');
     nameEl.classList.add('name-tag');
@@ -71,8 +72,11 @@ export function renderSingleUser(user) {
     const bioEl = document.createElement('p');
     bioEl.classList.add('bio-tag');
     bioEl.textContent = user.bio;
+    bioEl.title = user.bio;
 
-    userEl.append(nameEl, imgEl, bioEl);
+    nameContainer.append(imgEl, nameEl);
+    
+    userEl.append(nameContainer, bioEl);
 
     return userEl;
 }
