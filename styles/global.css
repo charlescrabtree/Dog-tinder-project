@@ -134,9 +134,8 @@ border-radius: 10px;
 .charlie-info {
     display: flex;
     flex-direction: column;
-width: 300px;
-height: 300px;
-
+    width: 300px;
+    height: 300px;
 }
 
 .emily-info {
@@ -176,7 +175,6 @@ height: 300px;
     margin: auto;
 }
 
-
 .linked-in {
     width: 40px;
     height: 40px;
@@ -188,6 +186,7 @@ height: 300px;
     height: 40px;
     border-radius: 15px;
 }
+
 form {
     width: 100%;
     margin: auto;
@@ -210,7 +209,6 @@ form button {
     padding: 7px;
     border-radius:8px;
     
-
 }
 
 form textarea {
@@ -226,12 +224,10 @@ input#file-upload-button {
     cursor: pointer;
 }
 
-
 .nav-link{
-   margin: 1rem;
+    margin: 1rem;
     color: #8F54A0;
 }
-
 
 .nav {
     top: 0%;
@@ -255,7 +251,6 @@ input#file-upload-button {
     align-items: center;
     flex-direction: column;
 }
-
 
 .navs {
     top: 0%;
@@ -297,7 +292,7 @@ input#file-upload-button {
     width: 60px;
     height: 60px;
     border-radius: 10px;
-    color:rgb(222, 237, 16);
+    color:#a66db6;
     background-color: black;
     margin: .5rem;
 }

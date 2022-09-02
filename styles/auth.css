@@ -13,8 +13,6 @@
 
 .signup-body {
   background-image: url("../assets/pet-background.PNG");
-  
-  
 }
 
 #auth-form {
@@ -65,7 +63,6 @@
   border-radius: 15px;
 
 }
-
 
 .accept{
   background-color: #957DAD;

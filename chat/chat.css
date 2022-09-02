@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Roboto&family=The+Nautigal:wght@700&display=swap');
 
-
-
-
 body {
     background-image: url('../assets/pet-background.png');
     display: flex;
@@ -10,7 +7,7 @@ body {
     margin: 0px;
     min-height: 100%;
     width: 100%;
- font-family: 'DynaPuff', cursive;
+    font-family: 'DynaPuff', cursive;
 }
 
 html {
@@ -18,7 +15,6 @@ html {
     height: 100%;
     width: 100%;
 }
-
 
 .avatar-class {
     width: 75px;
@@ -35,9 +31,7 @@ html {
     justify-content: flex-start;
     align-items: center;
     border-radius: 15px;
-
 }
-
 
 .chat-container {
     background-color: #F9CEEE;
@@ -52,9 +46,7 @@ html {
     box-shadow: 0px 0px 29px 8px rgba(0,0,0,0.75);
     scrollbar-width: auto;
     scrollbar-color: #8f54a0 #ffffff;
-
 }
-
 
   *::-webkit-scrollbar {
     width: 17px;
@@ -69,6 +61,12 @@ html {
     border-radius: 10px;
     border: 3px solid #ffffff;
   }
+
+.dog-park-title {
+  color: black;
+font-family: 'DynaPuff', cursive;
+font-size: 4.5rem;
+}
 
 .chat-list {
     display: flex;
@@ -106,10 +104,6 @@ html {
 font-size: 1rem;
 }
 
-.username {
-
-}
-
 .your-message{
     flex-direction: row-reverse;
     align-self: end;
@@ -125,18 +119,18 @@ font-size: 1rem;
 }
 
 .chat-input{
-  padding: 6px;
-     font-size: 16px;
-     border-width: 2px;
-     border-color: #CCCCCC;
-     background-color: #FFFFFF;
-     color: #000000;
-     border-style: solid;
-     border-radius: 8px;
-     box-shadow: 0px 0px 5px rgba(0,0,0,.88);
-     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
-     margin: 20px;
-      font-family: 'DynaPuff', cursive;
+    padding: 6px;
+    font-size: 16px;
+    border-width: 2px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.88);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    margin: 20px;
+    font-family: 'DynaPuff', cursive;
 }
 
 .chat-button {
@@ -157,8 +151,8 @@ font-size: 1rem;
   font-size: 26px;
   padding: 10px;
   text-decoration: none;
-   font-family: 'DynaPuff', cursive;
-   transition: all 0.5s ease;
+  font-family: 'DynaPuff', cursive;
+  transition: all 0.5s ease;
 }
 
 .chat-button:hover {
@@ -190,7 +184,6 @@ font-size: 1rem;
     flex-direction: column;
     padding: 10px;
     border-radius: 15px;
-
 }
 
 
