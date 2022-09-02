@@ -1,23 +1,19 @@
-// importing other stuff, utility functions for:
-// working with supabase:
-import { checkAuth, signOutUser } from './fetch-utils.js';
-// pure rendering (data --> DOM):
+import { checkAuth, signOutUser, getAllUsers, } from './fetch-utils.js';
+import { renderAllUsers } from './render-function.js';
 
-/*  "boiler plate" auth code */
-// checking if we have a user! (will redirect to auth if not):
-checkAuth();
-// can optionally return the user:
-// const user = checkAuth();
-
-// sign out link:
 const signOutLink = document.getElementById('sign-out-link');
+const userContainerEl = document.getElementById('users-container');
+checkAuth();
+
 signOutLink.addEventListener('click', signOutUser);
-/* end "boiler plate auth code" */
 
-// grab needed DOM elements on page:
+async function displayAllUsers() {
+    const users = await getAllUsers();
 
-// local state:
+    for (let user of users) {
+        const userDiv = renderAllUsers(user);
+        userContainerEl.append(userDiv);
+    }
+}
 
-// display functions:
-
-// events:
+displayAllUsers();

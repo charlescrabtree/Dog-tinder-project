@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="stylesheet" href="chat.css" />
+    <title>🐾 Ebarkony 🐾</title>
+</head>
+<body>
+    <div class="entire-page">
+        <nav class="nav">
+            <a id="sign-out-link" href="../auth" class="nav-link">Sign Out</a>
+            <a id="pawfile" href="../pawfile-update/index.html" class="nav-link">My Pawfile</a>
+            <a href="../index.html" class="nav-link">Pawfiles</a>
+            <a href="../creator-page/index.html" class="nav-link">Creator Page</a>
+        </nav>
+        <h1 class="dog-park-title">Dog Park</h1>
+        <section class="chat-container">
+            <div id="chat-container" class="chat-list">
+            </div>
+        </section>
+        <form class="chat-form" id="chat-form">
+            <input name="text" type="text" placeholder="Woof" class="chat-input"/>
+            <button class="chat-button">Send message</button>
+        </form>
+    </div>
+</body>
+<script type="module" src="chat.js"></script>
+</html>
