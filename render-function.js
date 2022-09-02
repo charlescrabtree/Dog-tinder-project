@@ -1,6 +1,7 @@
 export function renderAllUsers(user) {
     const a = document.createElement('a');
     a.href = `./detail-page/?user_id=${user.user_id}`;
+    a.classList.add('text-decoration');
 
     const userEl = document.createElement('div');
     userEl.classList.add('user-div');
