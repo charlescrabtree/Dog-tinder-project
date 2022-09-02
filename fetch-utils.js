@@ -114,6 +114,13 @@ export async function uploadImage(bucketName, imageFile, imageName) {
     return url;
 }
 
+
+
+export async function getSingleUser(user_id) {
+    const response = await client.from('pawfile').select().match({ user_id }).single();
+    return response.data;
+}
+
 export async function onMessage(handleNewMessage) {
     client 
         .from('pawfile_chat')
@@ -128,4 +135,30 @@ export async function deleteMessage(id) {
         .match({ id });
     
     return response.data;
+}
+
+export async function getAllDetailComments(target_id) {
+    const response = await client
+        .from('comments')
+        .select('*')
+        .match({ target_id });
+
+    return response.data;        
+}
+
+export async function createDetailComment(comment, target_id) {
+    const response = await client
+        .from('comments')
+        .insert({
+            message: comment, target_id: target_id
+        });
+        
+    return response.data;
+}
+
+export async function onComment(handleNewComment) {
+    client 
+        .from('comments')
+        .on('INSERT', handleNewComment)
+        .subscribe();
 }
