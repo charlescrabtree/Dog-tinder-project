@@ -14,6 +14,7 @@ async function displayComments() {
     const messages = await getAllMessages();
 
     chatContainerEl.innerHTML = '';
+
     for (let message of messages) {
         displayMessage(message);
     }
@@ -22,7 +23,9 @@ async function displayComments() {
 async function displayMessage(message) {
     const userId = await getUserById(message.pawfile_id);
     const renderChat = renderMessage(message.message, userId, currentUser);
+
     chatContainerEl.append(renderChat);
+
     renderChat.scrollIntoView({
         behavior: 'smooth'
     });
@@ -30,7 +33,9 @@ async function displayMessage(message) {
 
 chatFormEl.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     const formData = new FormData(chatFormEl);
+    
     await addMessage({ message: formData.get('text') });
 
     chatFormEl.reset();
