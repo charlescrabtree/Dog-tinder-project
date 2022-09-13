@@ -315,6 +315,7 @@ input#file-upload-button {
 	text-transform: uppercase;
 	font-size: 50px;
 	color: #F9F3EE;
+    text-shadow: 3px 5px 2px #474747;
     border-radius: 15px;
 }
 .content-text h3 {
@@ -329,4 +330,5 @@ input#file-upload-button {
     margin: 0;
     letter-spacing: 2px;
     color: #F9F3EE;
+    text-shadow: 3px 5px 2px #474747;
 }

@@ -1,7 +1,7 @@
 Barkle
 
 ### || DEV Team ||
-
+  
 Charles Crabtree
 
 [LinkedIn]  https://www.linkedin.com/in/charles-crabtree
@@ -49,15 +49,13 @@ After signing up, you'll be redirected to 'My Pawfile.' You can add your informa
 ### || Deployed Site ||
 
 [Netlify]
-
 - check out our app below-
 
-https://coruscating-dasik-e76837.netlify.app/
+https://brilliant-snickerdoodle-8ca138.netlify.app/
 
 ### || Our Plan ||
 
 [Whimsical] 
-
 - allows non-collaborators to view whimsical board -
 
 https://whimsical.com/ebarkony-VDG4V5kwhedWm4S2tywpSn
